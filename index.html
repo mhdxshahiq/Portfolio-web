@@ -9,28 +9,29 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <script>
-    // 1. Hamburger Menu Toggle
+<script>
+    // 1. Toggle Menu (Open/Close)
     function toggleMenu() {
         const menu = document.querySelector('.nav-menu');
         const icon = document.querySelector('.menu-icon');
+        
+        // Toggle the class 'active' on menu and 'open' on icon
         menu.classList.toggle('active');
         icon.classList.toggle('open');
     }
 
-    // 2. Scroll Logic (Hide/Show Navbar)
+    // 2. Scroll Logic
     document.addEventListener("DOMContentLoaded", function() {
         let lastScrollTop = 0;
         const navbar = document.querySelector('.navbar');
 
         if (navbar) {
             window.addEventListener('scroll', function() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                
-                // If menu is OPEN, don't hide the navbar
+                // If menu is open, do NOT hide the navbar
                 if (document.querySelector('.nav-menu.active')) return;
 
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
                 if (scrollTop > lastScrollTop && scrollTop > 50) {
                     navbar.style.top = "-100px"; // Hide
                 } else {
@@ -46,7 +47,7 @@
     Download Resume
 </a>
 
-    <nav class="navbar">
+   <nav class="navbar">
     <div class="nav-container">
         <a href="index.html" class="nav-logo">Mhdxshahiq</a>
         
@@ -59,10 +60,14 @@
         <ul class="nav-menu"> 
             <li><a href="index.html" class="nav-link active" onclick="toggleMenu()">Home</a></li>
             <li><a href="photos.html" class="nav-link" onclick="toggleMenu()">Photos</a></li>
-            <li><a href="public/shahiq_resume.pdf" target="_blank" class="nav-link nav-cta" onclick="toggleMenu()">Download Resume</a></li>
+            <li><a href="public/shahiq_resume.pdf" target="_blank" class="nav-link nav-cta desktop-only">Download Resume</a></li>
         </ul>
     </div>
 </nav>
+
+<a href="public/shahiq_resume.pdf" target="_blank" class="mobile-resume-btn">
+    Resume ⇩
+</a>
 
     <div class="hero" id="home">
         <div class="hero-content">
@@ -316,4 +321,5 @@
 </footer>
 </body>
 </html>
+
 
