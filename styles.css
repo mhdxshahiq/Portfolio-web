@@ -845,3 +845,48 @@ html, body {
         padding: 3rem 1.5rem !important; /* Fits content to screen width */
     }
 }
+
+/* =========================================
+   STRONG MOBILE FIXES (Paste at very bottom)
+   ========================================= */
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden; /* Fixes the black side space */
+}
+
+/* DESKTOP DEFAULT: Keep name on one line */
+.hero-content h1 span {
+    white-space: nowrap;
+}
+
+/* MOBILE RULES */
+@media (max-width: 768px) {
+    
+    /* 1. FORCE NAV MENU TO STACK VERTICALLY */
+    .nav-menu {
+        display: flex !important;
+        flex-direction: column !important; /* Stack items top-to-bottom */
+        align-items: center !important;
+        gap: 15px !important; /* Space between links */
+        width: 100% !important;
+    }
+
+    .nav-container {
+        flex-direction: column !important;
+        padding-bottom: 1rem !important;
+    }
+
+    /* 2. FIX NAME CUT-OFF (Automatic Wrapping) */
+    .hero-content h1 span {
+        white-space: normal !important; /* Force text to wrap */
+        display: block !important;
+        line-height: 1.2 !important;
+        text-align: center !important;
+    }
+
+    /* 3. ADJUST PADDING */
+    .hero {
+        padding-top: 160px !important; /* Extra space for the taller menu */
+    }
+}
