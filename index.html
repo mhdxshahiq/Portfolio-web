@@ -11,20 +11,31 @@
 <body>
 
 <script>
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar'); // CHANGED FROM .nav-container
+document.addEventListener("DOMContentLoaded", function() {
+    let lastScrollTop = 0;
+    const navbar = document.querySelector('.navbar');
 
-window.addEventListener('scroll', function() {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-  if (scrollTop > lastScrollTop) {
-    // Scrolling DOWN -> Hide Navbar
-    navbar.style.top = "-250px"; // Moves it out of view
-  } else {
-    // Scrolling UP -> Show Navbar
-    navbar.style.top = "0";
-  }
-  lastScrollTop = scrollTop;
+    if (navbar) {
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // 1. If at the top of the page (Home), ALWAYS show navbar
+            if (scrollTop <= 0) {
+                navbar.classList.remove('nav-hidden');
+                return;
+            }
+
+            // 2. Logic: Scroll Down -> Hide, Scroll Up -> Show
+            if (scrollTop > lastScrollTop) {
+                // Scrolling DOWN
+                navbar.classList.add('nav-hidden');
+            } else {
+                // Scrolling UP
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollTop = scrollTop;
+        });
+    }
 });
 </script>
     
@@ -295,5 +306,6 @@ window.addEventListener('scroll', function() {
 </footer>
 </body>
 </html>
+
 
 
