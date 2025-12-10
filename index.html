@@ -10,20 +10,59 @@
 </head>
 <body>
 
+    <script>
+    // 1. Hamburger Menu Toggle
+    function toggleMenu() {
+        const menu = document.querySelector('.nav-menu');
+        const icon = document.querySelector('.menu-icon');
+        menu.classList.toggle('active');
+        icon.classList.toggle('open');
+    }
+
+    // 2. Scroll Logic (Hide/Show Navbar)
+    document.addEventListener("DOMContentLoaded", function() {
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.navbar');
+
+        if (navbar) {
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // If menu is OPEN, don't hide the navbar
+                if (document.querySelector('.nav-menu.active')) return;
+
+                if (scrollTop > lastScrollTop && scrollTop > 50) {
+                    navbar.style.top = "-100px"; // Hide
+                } else {
+                    navbar.style.top = "0"; // Show
+                }
+                lastScrollTop = scrollTop;
+            });
+        }
+    });
+</script>
+
     <a href="public/shahiq_resume.pdf" target="_blank" class="floating-resume-btn">
     Download Resume
 </a>
 
     <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">Mhdxshahiq</a>
-            <ul class="nav-menu"> 
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="photos.html" class="nav-link">Photos</a></li>
-                <li><a href="public/shahiq_resume.pdf" target="_blank" class="nav-link nav-cta">Download Resume</a></li>
-            </ul>
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Mhdxshahiq</a>
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </nav>
+
+        <ul class="nav-menu"> 
+            <li><a href="index.html" class="nav-link active" onclick="toggleMenu()">Home</a></li>
+            <li><a href="photos.html" class="nav-link" onclick="toggleMenu()">Photos</a></li>
+            <li><a href="public/shahiq_resume.pdf" target="_blank" class="nav-link nav-cta" onclick="toggleMenu()">Download Resume</a></li>
+        </ul>
+    </div>
+</nav>
 
     <div class="hero" id="home">
         <div class="hero-content">
@@ -277,3 +316,4 @@
 </footer>
 </body>
 </html>
+
