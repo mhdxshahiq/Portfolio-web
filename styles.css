@@ -663,116 +663,119 @@ footer {
 
 
 /* =========================================
-   FINAL MOBILE MENU & FLOATING BUTTON
+   FINAL MOBILE CLEANUP (Paste at bottom of CSS)
    ========================================= */
 
-/* 1. Floating Resume Button (Mobile Only) */
+/* 1. Floating Resume Button (Hidden on Desktop) */
 .mobile-resume-btn {
-    display: none; /* Hidden on Desktop */
+    display: none;
 }
 
-/* Hide Desktop Resume Button on Mobile */
+/* 2. MOBILE RULES (Max Width 768px) */
 @media (max-width: 768px) {
-    .desktop-only {
-        display: none !important;
+
+    /* --- A. REMOVE TOP NAVBAR --- */
+    .navbar {
+        display: none !important; /* Completely hides the top menu */
     }
 
-    /* Floating Button Styles */
+    /* --- B. SHOW FLOATING RESUME BUTTON --- */
     .mobile-resume-btn {
-        display: flex;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         bottom: 20px;
-        right: 20px;
+        right: 20px; /* Floats in bottom-right corner */
         background: #AA0202;
         color: white;
-        padding: 10px 15px;
+        padding: 12px 20px;
         border-radius: 50px;
         text-decoration: none;
         font-weight: bold;
         font-size: 0.9rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        z-index: 9999; /* Always on top */
+        box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        z-index: 9999;
         animation: float 3s ease-in-out infinite;
     }
-    
+
     @keyframes float {
         0% { transform: translateY(0px); }
         50% { transform: translateY(-5px); }
         100% { transform: translateY(0px); }
     }
-}
 
-/* 2. Menu Icon Styles */
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    cursor: pointer;
-    z-index: 10001; /* Higher than the menu box so you can click it to close */
-}
-
-.menu-icon span {
-    width: 30px;
-    height: 3px;
-    background-color: #e8e8e8;
-    transition: 0.3s;
-    border-radius: 2px;
-}
-
-/* Rotate lines to make an 'X' when open */
-.menu-icon.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 8px); }
-.menu-icon.open span:nth-child(2) { opacity: 0; }
-.menu-icon.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -8px); }
-
-/* 3. Mobile Layout & Menu Box */
-@media (max-width: 768px) {
-    
-    .menu-icon {
-        display: flex; /* Show hamburger icon */
+    /* --- C. FIX "LEFT SPACE" & ALIGNMENT --- */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
     }
 
-    .nav-menu {
-        position: fixed; /* Fixed so it covers screen */
-        top: 0;
-        right: -100%; /* Hidden to the right */
-        width: 70%;   /* Cover 70% of screen width */
-        height: 100vh;
-        background: #1a1a1a;
-        flex-direction: column;
-        align-items: flex-end; /* ALIGN ITEMS TO RIGHT */
-        justify-content: center;
-        padding-right: 2rem; /* Spacing from right edge */
-        gap: 2rem;
-        transition: 0.3s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
-        z-index: 10000;
-    }
-
-    .nav-menu.active {
-        right: 0; /* Slide in */
-    }
-
-    .nav-link {
-        font-size: 1.2rem !important; /* Bigger text for mobile menu */
-    }
-
-    /* --- Center Alignment for Page Content --- */
-    .hero, .contact-bar, section {
-        text-align: center !important;
+    /* Reset all major containers to be centered with small padding */
+    .hero, section, .hero-content, .contact-bar {
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important; /* Centers text */
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: center !important; /* Centers items horizontally */
     }
+
+    /* --- D. FORCE 1 COLUMN LAYOUT (1 Row / 1 Column) --- */
     
-    /* Force grids to 1 column */
-    .hero, .projects-grid, .skills-grid, .gallery-container, .experience-section > div {
-        grid-template-columns: 1fr !important;
-        width: 100% !important;
-    }
-    
-    /* Fix Hero Padding */
+    /* 1. Hero Content */
     .hero {
-        padding-top: 100px !important;
+        padding-top: 4rem !important; /* Less space since navbar is gone */
+        gap: 2rem !important;
+    }
+
+    /* 2. Experience Section (Overrides inline HTML styles) */
+    .experience-section > div {
+        display: flex !important; /* Switch from Grid to Flex to stack */
+        flex-direction: column !important;
+        gap: 1rem !important;
+        text-align: center !important;
+    }
+    
+    /* Hide the decorative dots/lines if they look messy centered */
+    .experience-section > div > div:last-child {
+        border-left: none !important;
+        padding-left: 0 !important;
+        border-top: 1px solid #333; /* Separator line instead */
+        padding-top: 1rem;
+    }
+
+    /* 3. Education & Skills */
+    .education-grid, .skills-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+    
+    #education > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    /* 4. Projects & Photos */
+    .projects-grid, .gallery-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Strict 1 Column */
+        gap: 2rem !important;
+    }
+
+    /* --- E. CARD SIZING --- */
+    .project-card, .skill-card, .photo-card, .education-card {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    /* Fix Hero Text Size */
+    .hero-content h1 {
+        font-size: 2.5rem !important;
     }
 }
-
