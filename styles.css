@@ -812,6 +812,32 @@ footer p {
         animation: float 3s ease-in-out infinite;
     }
 
+    /* === SHOW FLOATING PHOTOS BUTTON === */
+    .mobile-photos-btn {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: #AA0202;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        z-index: 9999;
+        animation: float 3s ease-in-out infinite;
+        transition: all 0.3s ease;
+    }
+
+    .mobile-photos-btn:hover {
+        background: #8b0101;
+        transform: scale(1.05);
+    }
+
     @keyframes float {
         0% { transform: translateY(0px); }
         50% { transform: translateY(-5px); }
