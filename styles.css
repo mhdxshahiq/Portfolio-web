@@ -662,74 +662,96 @@ footer {
 }
 
 /* =========================================
-   FINAL MOBILE FIXES (Right Space + Tiny Nav + 1 Column)
-   Paste at the VERY BOTTOM of styles.css
+   FINAL MOBILE FIXES: HAMBURGER & CENTER ALIGN
    ========================================= */
 
+/* 1. HAMBURGER MENU STYLES */
+.menu-icon {
+    display: none; /* Hidden on Desktop */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: #e8e8e8;
+    transition: 0.3s;
+}
+
+/* Rotate lines when open */
+.menu-icon.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+.menu-icon.open span:nth-child(2) { opacity: 0; }
+.menu-icon.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+/* 2. MOBILE SPECIFIC RULES */
 @media (max-width: 768px) {
-
-    /* 1. FIX RIGHT SIDE SPACE (Overflow Issue) */
-    html, body {
-        width: 100%;
-        overflow-x: hidden; /* Cuts off the black space */
-    }
-
-    /* The main cause of black space was 'padding: 4rem' (too big for phones).
-       We reduce it to 1.5rem here. */
-    section, 
-    .hero-content, 
-    .contact-bar, 
-    .nav-container {
-        padding-left: 1.5rem !important;
-        padding-right: 1.5rem !important;
-        width: 100% !important;
-        box-sizing: border-box; /* Ensures padding doesn't expand width */
-    }
-
-    /* 2. REDUCE NAVBAR SIZE (Make it tiny) */
-    .navbar {
-        padding: 0.4rem 0 !important; /* Very thin bar */
-    }
-
-    .nav-logo {
-        font-size: 1.2rem !important; /* Smaller logo text */
+    
+    /* --- A. NAVBAR AS A MENU BOX --- */
+    .menu-icon {
+        display: flex; /* Show button on mobile */
     }
 
     .nav-menu {
-        gap: 10px !important; /* Pull links closer together */
+        position: absolute;
+        top: 60px; /* Push below navbar */
+        right: -100%; /* Hide off-screen by default */
+        width: 100%;
+        height: auto;
+        background: #1a1a1a;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        transition: 0.3s ease-in-out;
+        border-bottom: 2px solid #AA0202;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.5);
     }
 
-    .nav-link {
-        font-size: 0.85rem !important; /* Smaller link text */
+    .nav-menu.active {
+        right: 0; /* Slide in when active */
     }
 
-    /* Make the Resume Button smaller */
-    .nav-cta {
-        padding: 6px 12px !important;
-        font-size: 0.8rem !important;
+    /* --- B. FIX "LEFT ALIGN" ISSUE (CENTER EVERYTHING) --- */
+    .hero, .hero-content, .contact-bar, section {
+        text-align: center !important; /* Force center text */
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
-    /* 3. FORCE 1x1 GRID (Single Column Layout) */
-    .hero, 
-    .projects-grid, 
-    .skills-grid, 
-    .education-grid, 
-    .gallery-container,
-    .experience-section > div {
-        grid-template-columns: 1fr !important; /* Force 1 column */
-        width: 100% !important;
-        gap: 2rem !important;
-        display: grid !important;
+    /* Fix Contact Icons Alignment */
+    .contact-info {
+        justify-content: center;
+        width: 100%;
+    }
+    .contact-item {
+        justify-content: center;
+    }
+    
+    /* Fix Cards Alignment */
+    .projects-grid, .skills-grid, .experience-section > div {
+        justify-items: center; /* Centers grid items */
+        text-align: center;
+    }
+    
+    /* Ensure content doesn't touch edges */
+    .hero-content p, .project-content p {
+        margin: 0 auto 1.5rem auto; /* Centers paragraph blocks */
     }
 
-    /* Ensure images/cards don't overflow */
-    .project-card, .photo-card, .skill-card {
-        width: 100% !important;
-        margin: 0 !important;
+    /* --- C. GLOBAL MOBILE CLEANUP --- */
+    html, body {
+        overflow-x: hidden;
     }
-
-    /* Adjust Top Spacing so Navbar doesn't cover content */
+    
     .hero {
-        padding-top: 100px !important; 
+        padding-top: 100px !important;
+    }
+    
+    /* Force 1 column layout */
+    .hero, .projects-grid, .skills-grid, .gallery-container, .experience-section > div {
+        grid-template-columns: 1fr !important;
     }
 }
+
