@@ -10,6 +10,24 @@
 </head>
 <body>
 
+<script>
+let lastScrollTop = 0;
+const navbar = document.querySelector('.nav-container');
+
+window.addEventListener('scroll', function() {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (scrollTop > lastScrollTop) {
+    // Scrolling DOWN -> Hide Navbar
+    navbar.style.top = "-250px"; // Moves it out of view
+  } else {
+    // Scrolling UP -> Show Navbar
+    navbar.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
+});
+</script>
+    
     <a href="public/shahiq_resume.pdf" target="_blank" class="floating-resume-btn">
     Download Resume
 </a>
@@ -277,3 +295,4 @@
 </footer>
 </body>
 </html>
+
