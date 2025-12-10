@@ -766,3 +766,100 @@ footer {
     }
 }
 
+/* =========================================
+   EXPERIENCE SECTION FIXES 
+   ========================================= */
+
+/* Desktop Layout */
+.experience-grid {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* The 200px width for Desktop only */
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.exp-date-col h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.exp-date-col p {
+    color: #b8b8b8;
+    margin-top: 0.5rem;
+}
+
+.exp-content-col {
+    border-left: 3px solid #333;
+    padding-left: 2rem;
+}
+
+.exp-content-wrapper {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+/* The Red Dot */
+.exp-dot {
+    position: absolute;
+    left: -2.6rem; /* Positions dot on the line */
+    top: 0.5rem;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #AA0202;
+    border-radius: 50%;
+    background: #0a0a0a;
+}
+
+.exp-content-wrapper h4 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.company-link {
+    color: #b8b8b8;
+    margin-bottom: 1rem;
+    word-break: break-word; /* Prevents link from overflowing */
+}
+
+.job-desc {
+    color: #b8b8b8;
+    line-height: 1.6;
+    word-wrap: break-word; /* Prevents long text from overflowing */
+}
+
+/* MOBILE FIX (The crucial part) */
+@media (max-width: 768px) {
+    .experience-grid {
+        display: flex;       /* Switches from Grid to Flex */
+        flex-direction: column; /* Stacks items vertically */
+        gap: 1.5rem;
+        width: 100%;        /* Ensures it fits screen */
+    }
+
+    /* Move border to top on mobile */
+    .exp-content-col {
+        border-left: none;
+        padding-left: 0;
+        border-top: 2px solid #333;
+        padding-top: 1.5rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Adjust the dot for mobile */
+    .exp-dot {
+        position: static; /* Removes absolute positioning */
+        display: inline-block;
+        margin-bottom: 10px;
+        width: 15px;
+        height: 15px;
+    }
+    
+    .exp-date-col h3 {
+        font-size: 2rem;
+    }
+}
+
