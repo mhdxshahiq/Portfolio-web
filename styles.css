@@ -661,119 +661,75 @@ footer {
     }
 }
 
-/* PASTE AT THE VERY BOTTOM OF styles.css */
 /* =========================================
-   MOBILE FIXES (Paste at bottom of styles.css)
+   FINAL MOBILE FIXES (Right Space + Tiny Nav + 1 Column)
+   Paste at the VERY BOTTOM of styles.css
    ========================================= */
 
-/* 1. Fix Name Breaking (Prevents "A R." from dropping to a new line alone) */
-.hero-content h1 span {
-    display: inline-block;
-    white-space: nowrap;
-}
-
-/* 2. Mobile Layout Rules */
 @media (max-width: 768px) {
-    
-    /* --- Fix Squished Experience Section --- */
-    /* Force it to stack in one column */
-    .experience-section > div {
-        grid-template-columns: 1fr !important; 
-        gap: 1.5rem !important;
+
+    /* 1. FIX RIGHT SIDE SPACE (Overflow Issue) */
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Cuts off the black space */
     }
 
-    /* Move the timeline border from Left side to Top side */
-    .experience-section > div > div:last-child {
-        border-left: none !important;
-        padding-left: 0 !important;
-        border-top: 2px solid #333 !important;
-        padding-top: 1.5rem !important;
-        margin-top: 1rem !important;
-    }
-
-    /* --- Fix Squished Education & Skills Section --- */
-    /* Force Education and Skills to stack */
-    #education > div {
-        grid-template-columns: 1fr !important;
-        gap: 3rem !important;
-    }
-
-    /* Fix the Skills Border (Change from Left to Top) */
-    #education > div > div:last-child > div {
-        border-left: none !important;          /* Remove vertical line */
-        padding-left: 0 !important;
-        border-top: 2px solid #333 !important; /* Add horizontal separator */
-        padding-top: 2rem !important;
-        margin-top: 1rem !important;
-    }
-
-    /* --- Fix Navbar on Phone --- */
+    /* The main cause of black space was 'padding: 4rem' (too big for phones).
+       We reduce it to 1.5rem here. */
+    section, 
+    .hero-content, 
+    .contact-bar, 
     .nav-container {
-        flex-direction: column;
-        gap: 1rem;
+        padding-left: 1.5rem !important;
+        padding-right: 1.5rem !important;
+        width: 100% !important;
+        box-sizing: border-box; /* Ensures padding doesn't expand width */
     }
+
+    /* 2. REDUCE NAVBAR SIZE (Make it tiny) */
+    .navbar {
+        padding: 0.4rem 0 !important; /* Very thin bar */
+    }
+
+    .nav-logo {
+        font-size: 1.2rem !important; /* Smaller logo text */
+    }
+
     .nav-menu {
-        gap: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        font-size: 0.9rem;
+        gap: 10px !important; /* Pull links closer together */
     }
 
-    /* --- Fix Hero Section Spacing --- */
-    .hero {
-        padding-top: 100px !important;
-        height: auto !important;
-        display: flex !important;
-        flex-direction: column;
+    .nav-link {
+        font-size: 0.85rem !important; /* Smaller link text */
     }
-    
-    .hero-content {
-        padding: 2rem 1.5rem !important;
-        text-align: center;
-    }
-}
-/* =========================================
-   FORCE 1 COLUMN (1x1) ON MOBILE
-   (Paste at the very bottom of styles.css)
-   ========================================= */
 
-@media (max-width: 768px) {
-    
-    /* 1. Force Main Grids to 1 Column */
+    /* Make the Resume Button smaller */
+    .nav-cta {
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+    }
+
+    /* 3. FORCE 1x1 GRID (Single Column Layout) */
     .hero, 
     .projects-grid, 
     .skills-grid, 
     .education-grid, 
-    .gallery-container {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Forces 1 column */
+    .gallery-container,
+    .experience-section > div {
+        grid-template-columns: 1fr !important; /* Force 1 column */
         width: 100% !important;
         gap: 2rem !important;
+        display: grid !important;
     }
 
-    /* 2. Fix Complex Inner Grids (Experience & Education) */
-    .experience-section > div, 
-    #education > div {
-        grid-template-columns: 1fr !important; /* Stack text below dates */
-        gap: 1.5rem !important;
-    }
-
-    /* 3. Ensure Cards Fit the Screen */
-    .project-card, 
-    .skill-card, 
-    .photo-card {
+    /* Ensure images/cards don't overflow */
+    .project-card, .photo-card, .skill-card {
         width: 100% !important;
-        max-width: 100% !important;
         margin: 0 !important;
     }
 
-    /* 4. Fix Photo Gallery Specifically (Was 2 columns, now 1) */
-    .gallery-container {
-        grid-template-columns: 1fr !important; 
-    }
-    
-    .photo-card {
-        height: auto !important; /* Let image define height */
-        min-height: 250px;
+    /* Adjust Top Spacing so Navbar doesn't cover content */
+    .hero {
+        padding-top: 100px !important; 
     }
 }
