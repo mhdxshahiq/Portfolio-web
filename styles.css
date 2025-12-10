@@ -732,3 +732,48 @@ footer {
         text-align: center;
     }
 }
+/* =========================================
+   FORCE 1 COLUMN (1x1) ON MOBILE
+   (Paste at the very bottom of styles.css)
+   ========================================= */
+
+@media (max-width: 768px) {
+    
+    /* 1. Force Main Grids to 1 Column */
+    .hero, 
+    .projects-grid, 
+    .skills-grid, 
+    .education-grid, 
+    .gallery-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important; /* Forces 1 column */
+        width: 100% !important;
+        gap: 2rem !important;
+    }
+
+    /* 2. Fix Complex Inner Grids (Experience & Education) */
+    .experience-section > div, 
+    #education > div {
+        grid-template-columns: 1fr !important; /* Stack text below dates */
+        gap: 1.5rem !important;
+    }
+
+    /* 3. Ensure Cards Fit the Screen */
+    .project-card, 
+    .skill-card, 
+    .photo-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* 4. Fix Photo Gallery Specifically (Was 2 columns, now 1) */
+    .gallery-container {
+        grid-template-columns: 1fr !important; 
+    }
+    
+    .photo-card {
+        height: auto !important; /* Let image define height */
+        min-height: 250px;
+    }
+}
