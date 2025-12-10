@@ -21,20 +21,29 @@ body {
 }
 
 /* --- NAVBAR (The Fixed Header) --- */
+/* 1. Main Navbar Bar */
 .navbar {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
-    background: #1a1a1a;
+    background: #1a1a1a; 
     border-bottom: 1px solid #333;
-    z-index: 1000;
-    padding: 1rem 0;
-    font-weight: 700;
-    transition: top 0.3s ease-in-out; /* Smooth hide/show animation */
+    z-index: 9999; 
+    padding: 0.8rem 0;
+    
+    /* This creates the smooth slide animation */
+    transition: transform 0.3s ease-in-out; 
+    transform: translateY(0); /* Default: Visible */
+}
+
+/* 2. Hidden State (Added by JS when scrolling down) */
+.navbar.nav-hidden {
+    transform: translateY(-100%); /* Slides the bar completely out of view */
 }
 
 .nav-container {
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -42,14 +51,37 @@ body {
     align-items: center;
 }
 
+/* 3. The Menu Links */
 .nav-menu {
     display: flex;
+    gap: 2rem;
     list-style: none;
-    gap: 3rem;
-    align-items: center;
     margin: 0;
     padding: 0;
-    margin-left: auto; 
+}
+
+/* --- MOBILE SPECIFIC FIXES --- */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 0; 
+    }
+
+    .nav-container {
+        flex-direction: column; /* Stack Logo & Links */
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+    
+    /* Adjust Hero spacing so content doesn't get covered */
+    .hero {
+        padding-top: 220px !important;
+    }
 }
 
 .nav-logo {
@@ -684,3 +716,4 @@ footer {
         font-size: 2.5rem;
     }
 }
+
