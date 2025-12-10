@@ -108,27 +108,27 @@
         </div>
     </div>
 
-    <section id="experience" style="background: #0a0a0a;">
+    <section id="experience" class="experience-bg">
         <h2 class="section-title">Experience</h2>
         <div class="experience-section">
-            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: start;">
-                <div>
-                    <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffffff;">2025</h3>
-                    <p style="color: #b8b8b8; margin-top: 0.5rem;">February - August</p>
+            <div class="experience-container">
+                <div class="experience-year">
+                    <h3 class="year-title">2025</h3>
+                    <p class="year-date">February - August</p>
                 </div>
-                <div style="border-left: 3px solid #333; padding-left: 2rem;">
-                    <div style="position: relative; padding-bottom: 2rem;">
-                        <div style="position: absolute; left: -2.6rem; top: 0.5rem; width: 20px; height: 20px; border: 3px solid #AA0202; border-radius: 50%; background: #0a0a0a;"></div>
-                        <h4 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 0.5rem;">AI Developer Intern</h4>
-                        <p style="color: #b8b8b8; margin-bottom: 1rem;">www.zoftcares.com</p>
-                        <p style="color: #b8b8b8; line-height: 1.6;">Built an LLM-powered RAG chatbot with optimized retrieval, domain-specific prompt engineering, and secure response controls. Improved real-time computer-vision models for workplace hazard detection, boosting accuracy and reducing inference latency. Developed scalable APIs, evaluation tools, and monitoring systems to support production-level AI performance.</p>
+                <div class="experience-content">
+                    <div class="experience-item">
+                        <div class="experience-dot"></div>
+                        <h4 class="job-title">AI Developer Intern</h4>
+                        <p class="company">www.zoftcares.com</p>
+                        <p class="job-description">Built an LLM-powered RAG chatbot with optimized retrieval, domain-specific prompt engineering, and secure response controls. Improved real-time computer-vision models for workplace hazard detection, boosting accuracy and reducing inference latency. Developed scalable APIs, evaluation tools, and monitoring systems to support production-level AI performance.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" style="background: #0a0a0a;">
+    <section id="projects" class="projects-bg">
         <h2 class="section-title">Featured Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
@@ -184,7 +184,7 @@
         </div>
     </section>
 
-    <section id="skills" style="background: #0a0a0a;">
+    <section id="skills" class="skills-bg">
         <h2 class="section-title">Skills & Technologies</h2>
         <div class="skills-grid">
             <div class="skill-card">
@@ -214,87 +214,61 @@
         </div>
     </section>
 
-    <section id="education" style="background: #0a0a0a;">
+    <section id="education" class="education-bg">
         <h2 class="section-title">Education & Skills</h2>
-        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+        <div class="education-container">
             
             <!-- Education Column -->
-            <div>
-                <div style="margin-bottom: 3rem;">
-                    <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 20px; height: 20px; border: 3px solid #AA0202; border-radius: 50%; background: #0a0a0a; margin-top: 0.3rem; flex-shrink: 0;"></div>
-                        <div>
-                            <h3 style="font-size: 1.3rem; color: #ffffff; margin-bottom: 0.5rem;">B.Tech in AI & Data Science (MESCE) - 2021-2025</h3>
-                            <p style="color: #b8b8b8; line-height: 1.6;">Pursued a comprehensive AI and Data Science program covering machine learning, deep learning, algorithms, and data analytics, with practical experience in model development and deployment.</p>
-                        </div>
+            <div class="education-column">
+                <div class="education-item">
+                    <div class="education-dot"></div>
+                    <div class="education-content">
+                        <h3 class="education-title">B.Tech in AI & Data Science (MESCE) - 2021-2025</h3>
+                        <p class="education-description">Pursued a comprehensive AI and Data Science program covering machine learning, deep learning, algorithms, and data analytics, with practical experience in model development and deployment.</p>
                     </div>
                 </div>
 
-                <div style="margin-bottom: 3rem;">
-                    <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
-                        <div style="width: 20px; height: 20px; border: 3px solid #AA0202; border-radius: 50%; background: #0a0a0a; margin-top: 0.3rem; flex-shrink: 0;"></div>
-                        <div>
-                            <h3 style="font-size: 1.3rem; color: #ffffff; margin-bottom: 0.5rem;">Higher Secondary - NGO Quarters HSS Kozhikode - 2019-2021</h3>
-                            <p style="color: #b8b8b8; line-height: 1.6;">Completed higher secondary education in Computer Science stream with a strong academic foundation, actively participating in school-level activities and building core analytical and communication skills.</p>
-                        </div>
+                <div class="education-item">
+                    <div class="education-dot"></div>
+                    <div class="education-content">
+                        <h3 class="education-title">Higher Secondary - NGO Quarters HSS Kozhikode - 2019-2021</h3>
+                        <p class="education-description">Completed higher secondary education in Computer Science stream with a strong academic foundation, actively participating in school-level activities and building core analytical and communication skills.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Skills Column -->
-            <div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; border-left: 2px solid #333; padding-left: 2rem;">
+            <div class="skills-column">
+                <div class="skills-grid-2col">
                     
-                    <div style="text-align: center;">
+                    <div class="skill-item">
                         <img src="images/home/education-skill/ai%20logo.png" alt="AI" class="skill-logo">
-                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Artificial Intelligence</h4>
-                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
-                            <!-- <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span> -->
-                        </div>
+                        <h4 class="skill-item-title">Artificial Intelligence</h4>
                     </div>
 
-                    <div style="text-align: center;">
+                    <div class="skill-item">
                         <img src="images/home/education-skill/ml%20logo.png" alt="Machine Learning" class="skill-logo">
-                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Machine Learning</h4>
-                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
-                        </div>
+                        <h4 class="skill-item-title">Machine Learning</h4>
                     </div>
 
-                    <div style="text-align: center;">
+                    <div class="skill-item">
                         <img src="images/home/education-skill/data-science%20%20logo.png" alt="Data Science" class="skill-logo">
-                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Data Science</h4>
-                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
-                        </div>
+                        <h4 class="skill-item-title">Data Science</h4>
                     </div>
 
-                    <div style="text-align: center;">
+                    <div class="skill-item">
                         <img src="images/home/education-skill/python%20logo.png" alt="Python" class="skill-logo">
-                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Python</h4>
-                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
-                        </div>
+                        <h4 class="skill-item-title">Python</h4>
                     </div>
 
-                    <div style="text-align: center;">
+                    <div class="skill-item">
                         <img src="images/home/education-skill/data-analysis%20logo.png" alt="Data Analysis" class="skill-logo">
-                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Data Visualization</h4>
-                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
-                            <!-- <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
-                            <span style="width: 12px; height: 12px; background: #333; border-radius: 50%;"></span> -->
-                        </div>
+                        <h4 class="skill-item-title">Data Visualization</h4>
                     </div>
 
-                    <div style="text-align: center;">
+                    <div class="skill-item">
                         <img src="images/home/education-skill/r.png" alt="R" class="skill-logo">
-                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">R</h4>
-                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
-                        </div>
+                        <h4 class="skill-item-title">R</h4>
                     </div>
 
                 </div>
@@ -303,10 +277,10 @@
         </div>
     </section>
 
-    <section id="contact" style="background: #0a0a0a;">
+    <section id="contact" class="contact-bg">
         <h2 class="section-title">Let's Connect</h2>
-        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; color: #b8b8b8; margin-bottom: 2rem;">
+        <div class="contact-section">
+            <p class="contact-description">
                 I'm always eager to collaborate on AI/ML projects and discuss new opportunities. Feel free to reach out!
             </p>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammedxshahiq@gmail.com" target="_blank" class="cta-button">Get In Touch</a>
