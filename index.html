@@ -10,35 +10,6 @@
 </head>
 <body>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-
-    if (navbar) {
-        window.addEventListener('scroll', function() {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            // 1. If at the top of the page (Home), ALWAYS show navbar
-            if (scrollTop <= 0) {
-                navbar.classList.remove('nav-hidden');
-                return;
-            }
-
-            // 2. Logic: Scroll Down -> Hide, Scroll Up -> Show
-            if (scrollTop > lastScrollTop) {
-                // Scrolling DOWN
-                navbar.classList.add('nav-hidden');
-            } else {
-                // Scrolling UP
-                navbar.classList.remove('nav-hidden');
-            }
-            lastScrollTop = scrollTop;
-        });
-    }
-});
-</script>
-    
     <a href="public/shahiq_resume.pdf" target="_blank" class="floating-resume-btn">
     Download Resume
 </a>
@@ -306,6 +277,3 @@ document.addEventListener("DOMContentLoaded", function() {
 </footer>
 </body>
 </html>
-
-
-
