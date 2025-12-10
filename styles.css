@@ -660,3 +660,34 @@ footer {
         height: 250px;
     }
 }
+
+/* PASTE AT THE VERY BOTTOM OF styles.css */
+@media (max-width: 768px) {
+    /* Force Experience section to stack */
+    .experience-section > div {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    /* Force Education section to stack */
+    #education > div {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+
+    /* Fix the Skills section border (move from left to top) */
+    #education > div > div:last-child > div {
+        border-left: none !important;
+        padding-left: 0 !important;
+        border-top: 2px solid #333 !important;
+        padding-top: 2rem !important;
+    }
+    
+    /* Fix Hero spacing */
+    .hero {
+        padding-top: 100px !important;
+        height: auto !important;
+        display: flex !important;
+        flex-direction: column;
+    }
+}
