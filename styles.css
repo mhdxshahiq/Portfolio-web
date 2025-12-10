@@ -8,7 +8,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #e8e8e8;
-    background: #0a0a0a;
+    background: #000000;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -96,12 +96,12 @@ body {
 
 .hero-content {
     padding: 0rem 2rem 2rem 4rem;
-    background: #0a0a0a;
+    background: #000000;
     transition: background-color 0.3s;
 }
 
 .hero-image {
-    background: #0a0a0a;
+    background: #000000;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -319,7 +319,7 @@ section {
     height: 20px;
     border: 3px solid #AA0202;
     border-radius: 50%;
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .job-title {
@@ -482,7 +482,7 @@ section {
 
 /* Education & Skills Section */
 .education-bg {
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .education-container {
@@ -510,7 +510,7 @@ section {
     height: 20px;
     border: 3px solid #AA0202;
     border-radius: 50%;
-    background: #0a0a0a;
+    background: #000000;
     margin-top: 0.3rem;
     flex-shrink: 0;
 }
@@ -562,19 +562,19 @@ section {
 
 /* Section Background Classes */
 .experience-bg {
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .projects-bg {
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .skills-bg {
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .contact-bg {
-    background: #0a0a0a;
+    background: #000000;
 }
 
 .contact-section {
@@ -882,6 +882,7 @@ footer p {
     .profile-pic {
         margin-left: auto !important;
         margin-right: auto !important;
+        display: none !important;
     }
 
     /* === CONTACT BAR === */
@@ -929,7 +930,7 @@ footer p {
 
     /* === EXPERIENCE SECTION === */
     .experience-bg {
-        background: #0a0a0a;
+        background: #000000;
     }
 
     .experience-container {
@@ -977,7 +978,7 @@ footer p {
 
     /* === EDUCATION & SKILLS SECTION === */
     .education-bg {
-        background: #0a0a0a;
+        background: #000000;
     }
 
     .education-container {
