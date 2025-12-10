@@ -582,3 +582,63 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* =======================================================
+   FINAL MOBILE FIXES (Force Override Inline Styles)
+   ======================================================= */
+
+@media (max-width: 968px) {
+
+    /* --- 1. FORCE EXPERIENCE SECTION TO STACK --- */
+    /* This targets the div with 'grid-template-columns: 200px 1fr' */
+    .experience-section > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+
+    /* Fix the "Year" text alignment */
+    .experience-section > div > div:first-child {
+        margin-bottom: 0.5rem !important;
+    }
+
+    /* Fix the vertical line border in Experience */
+    .experience-section > div > div:last-child {
+        border-left: none !important;
+        padding-left: 0 !important;
+        border-top: 2px solid #333 !important; /* Move line to top */
+        padding-top: 1.5rem !important;
+    }
+
+
+    /* --- 2. FORCE EDUCATION SECTION TO STACK --- */
+    /* This targets the div with 'grid-template-columns: 1fr 1fr' */
+    #education > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3rem !important;
+    }
+
+
+    /* --- 3. FORCE SKILLS SECTION FIXES --- */
+    /* This targets the specific div with the side border */
+    #education > div > div:last-child > div {
+        border-left: none !important;           /* Remove side line */
+        padding-left: 0 !important;
+        border-top: 2px solid #333 !important;  /* Add top line */
+        padding-top: 2rem !important;
+        margin-top: 1rem !important;
+        
+        /* Ensure the grid inside fits small screens */
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 1.5rem !important;
+    }
+
+    /* Shrink the skill icons slightly so they don't look huge */
+    .skill-logo {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
