@@ -10,13 +10,10 @@ body {
     color: #e8e8e8;
     background: #0a0a0a;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden; /* Prevents side-scrolling if something sticks out */
 }
 
-/* Floating Resume Button (Optional - kept hidden as per Code 2 preference) */
-.floating-resume-btn {
-    display: none; 
-}
-
+/* --- NAVBAR --- */
 .navbar {
     position: fixed;
     top: 0;
@@ -28,6 +25,15 @@ body {
     font-weight: 700;
 }
 
+.nav-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
@@ -35,16 +41,7 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    margin-left: auto;  /* Pushes the entire menu to the right */
-}
-
-.nav-container {
-    max-width: 1500px;
-    margin: 0  auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-left: auto;
 }
 
 .nav-logo {
@@ -72,7 +69,7 @@ body {
     border-radius: 30px;     
     color: #fff;
     font-weight: 700;        
-    transition: background 0.3s ease;  /* Only transition background color */
+    transition: background 0.3s ease;
     display: inline-flex;    
     align-items: center;     
     justify-content: center;
@@ -84,17 +81,17 @@ body {
     color: #fff;
 }
 
-/* --- UPDATED HERO SECTION (Spacing from Code 2) --- */
+/* --- HERO SECTION --- */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
-    align-items: center;
-    padding-top: 70px; /* Increased from 30px to prevent Nav overlap */
+    align-items: flex-start; 
+    padding-top: 140px;      
 }
 
 .hero-content {
-    padding: 0rem 2rem 2rem 4rem;
+    padding: 0 2rem 2rem 4rem;
     background: #0a0a0a;
     transition: background-color 0.3s;
 }
@@ -103,12 +100,15 @@ body {
     background: #0a0a0a;
     height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    position: sticky;
     top: 0;
+    padding-top: 2rem;
 }
+
 .hero-image img {
-    height: 85%;             /* Make image larger */
+    height: 85%;
     width: auto;
     max-width: 90%;
     object-fit: contain;
@@ -133,6 +133,12 @@ body {
     transition: color 0.3s;
 }
 
+/* Name span logic */
+.hero-content h1 span {
+    display: inline-block;
+    white-space: nowrap; /* Keeps name together on big screens */
+}
+
 .hero-content h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -150,12 +156,12 @@ body {
     transition: color 0.3s;
 }
 
-/* --- UPDATED CTA BUTTON (Red Styling from Code 2) --- */
+/* --- BUTTONS --- */
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
     background: transparent;
-    border: 2px solid #AA0202; /* Red border */
+    border: 2px solid #AA0202;
     border-radius: 30px;
     color: #ffffff;
     text-decoration: none;
@@ -166,12 +172,13 @@ body {
 }
 
 .cta-button:hover {
-    background: #AA0202; /* Red background on hover */
+    background: #AA0202;
     color: #fff;
-    border-color: #8b0101;
-    box-shadow: 0 0 15px rgba(170, 2, 2, 0.4); /* Glow effect */
+    border-color: #AA0202;
+    box-shadow: 0 0 15px rgba(170, 2, 2, 0.4);
 }
 
+/* --- CONTACT BAR --- */
 .contact-bar {
     display: flex;
     justify-content: space-between;
@@ -180,7 +187,7 @@ body {
     background: #1a1a1a;
     border-top: 1px solid #333;
     transition: background-color 0.3s, border-color 0.3s;
-    margin-top: -70px;  /* Negative margin pulls it up into hero section */
+    margin-top: -70px;
     position: relative;
     z-index: 10; 
 }
@@ -228,14 +235,12 @@ body {
     transition: all 0.3s;
 }
 
-/* Updated Social Hover to Red */
 .social-links a:hover {
-    background: transparent;  /* Removed the Red (#AA0202) background */
-    transform: scale(1.2);    /* Makes the icon 20% bigger instead of moving up */
+    background: transparent;
+    transform: scale(1.2);
     opacity: 1;
 }
 
-/* small inline icons used next to text */
 .icon {
     width: 18px;
     height: 18px;
@@ -244,7 +249,6 @@ body {
     margin-right: 8px;
 }
 
-/* logos used in the Skills / Education section */
 .skill-logo {
     width: 64px;
     height: 64px;
@@ -252,7 +256,6 @@ body {
     margin: 0 auto 1rem auto;
     object-fit: contain;
 }
-
 
 section {
     padding: 5rem 4rem;
@@ -268,92 +271,18 @@ section {
     transition: color 0.3s;
 }
 
+/* --- EXPERIENCE & PROJECTS --- */
 .experience-section {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.experience-card {
-    background: #1a1a1a;
-    padding: 2.5rem;
-    border: 2px solid #333;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    transition: background-color 0.3s, border-color 0.3s;
+.experience-section p {
+    /* Ensures description text wraps on small screens */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-.experience-header {
-    margin-bottom: 2rem;
-}
-
-.experience-header h3 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s;
-}
-
-.experience-meta {
-    color: #b8b8b8;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.project-section {
-    margin-top: 2rem;
-}
-
-.project-section h4 {
-    font-size: 1.3rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    transition: color 0.3s;
-}
-
-.project-section ul {
-    list-style-position: inside;
-    color: #b8b8b8;
-    transition: color 0.3s;
-}
-
-.project-section li {
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
-}
-
-/* --- UPDATED SKILL CARDS (Red Hover from Code 2) --- */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.skill-card {
-    padding: 2rem;
-    background: #1a1a1a;
-    border: 2px solid #333;
-    border-radius: 10px;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.skill-card:hover {
-    border-color: #AA0202; /* Red border on hover */
-}
-
-.skill-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #ffffff;
-    transition: color 0.3s;
-}
-
-.skill-card p {
-    color: #b8b8b8;
-}
-
-/* --- UPDATED PROJECT CARDS (Red Hover from Code 2) --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -371,8 +300,8 @@ section {
 }
 
 .project-card:hover {
-    border-color: #AA0202; /* Red border on hover */
-    transform: translateY(-5px); /* Lift effect */
+    border-color: #AA0202;
+    transform: translateY(-5px);
 }
 
 .project-image {
@@ -401,6 +330,7 @@ section {
 .project-content p {
     color: #b8b8b8;
     margin-bottom: 1rem;
+    word-wrap: break-word; /* Prevents long text from breaking layout */
 }
 
 .project-links {
@@ -409,10 +339,9 @@ section {
     margin-top: 1rem;
 }
 
-/* --- UPDATED PROJECT LINKS (Red Styling from Code 2) --- */
 .project-link {
     padding: 0.5rem 1rem;
-    border: 1px solid #AA0202; /* Red border */
+    border: 1px solid #AA0202;
     border-radius: 5px;
     color: #ffffff;
     text-decoration: none;
@@ -421,7 +350,7 @@ section {
 }
 
 .project-link:hover {
-    background: #AA0202; /* Red background */
+    background: #AA0202;
     color: #fff;
 }
 
@@ -441,38 +370,35 @@ section {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.education-grid {
-    max-width: 1000px;
-    margin: 0 auto;
+.skills-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.education-card {
-    background: #1a1a1a;
+.skill-card {
     padding: 2rem;
+    background: #1a1a1a;
     border: 2px solid #333;
     border-radius: 10px;
     transition: background-color 0.3s, border-color 0.3s;
 }
 
-.education-card h3 {
+.skill-card:hover {
+    border-color: #AA0202;
+}
+
+.skill-card h3 {
     font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s;
-}
-
-.education-card .institution {
-    color: #b8b8b8;
     margin-bottom: 1rem;
+    color: #ffffff;
     transition: color 0.3s;
 }
 
-.education-card .details {
+.skill-card p {
     color: #b8b8b8;
-    font-size: 0.95rem;
-    transition: color 0.3s;
 }
 
 footer {
@@ -483,74 +409,7 @@ footer {
     transition: background-color 0.3s;
 }
 
-@media (max-width: 968px) {
-
-    .nav-container {
-    flex-direction: column;
-    gap: 1rem;
-    }
-
-    .nav-menu {
-    gap: 1.5rem; /* Reduces gap between links on mobile */
-    flex-wrap: wrap; /* Allows items to wrap if screen is very small */
-    justify-content: center;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        padding-top: 60px; /* Adjusted for mobile */
-    }
-
-    .hero-image {
-        height: 50vh;
-        order: -1; /* Image on top for mobile */
-    }
-
-    .hero-content {
-        padding: 2rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 3rem 2rem;
-    }
-
-    .contact-bar {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 2rem;
-    }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* Added mobile nav stacking from Code 2 */
-    .nav-container {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav-menu {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-/* Photography Page Styles (Kept exactly as Code 1) */
+/* --- PHOTOGRAPHY PAGE --- */
 .photos-hero {
     text-align: center;
     padding: 10rem 2rem 4rem;
@@ -600,8 +459,6 @@ footer {
     height: 100%;
     object-fit: cover;
     transition: opacity 0.3s ease;
-    image-rendering: high-quality;
-    image-rendering: crisp-edges;
 }
 
 .photo-card:hover img {
@@ -634,101 +491,150 @@ footer {
     text-align: center;
 }
 
-.footer {
-    text-align: center;
-    padding: 2rem;
-    background: #1a1a1a;
-    border-top: 1px solid #333;
-    color: #b8b8b8;
-}
-
 .nav-link.active {
     color: #AA0202;
 }
 
-@media (max-width: 768px) {
-    .photos-hero h1 {
-        font-size: 2.5rem;
-    }
+/* =================================================================
+   FINAL MOBILE & RESPONSIVE FIXES (Force Overrides)
+   ================================================================= */
+@media (max-width: 968px) {
 
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-
-    .photo-card {
-        height: 250px;
-    }
-}
-
-/* PASTE AT THE VERY BOTTOM OF styles.css */
-/* =========================================
-   MOBILE FIXES (Paste at bottom of styles.css)
-   ========================================= */
-
-/* 1. Fix Name Breaking (Prevents "A R." from dropping to a new line alone) */
-.hero-content h1 span {
-    display: inline-block;
-    white-space: nowrap;
-}
-
-/* 2. Mobile Layout Rules */
-@media (max-width: 768px) {
-    
-    /* --- Fix Squished Experience Section --- */
-    /* Force it to stack in one column */
-    .experience-section > div {
-        grid-template-columns: 1fr !important; 
-        gap: 1.5rem !important;
-    }
-
-    /* Move the timeline border from Left side to Top side */
-    .experience-section > div > div:last-child {
-        border-left: none !important;
-        padding-left: 0 !important;
-        border-top: 2px solid #333 !important;
-        padding-top: 1.5rem !important;
-        margin-top: 1rem !important;
-    }
-
-    /* --- Fix Squished Education & Skills Section --- */
-    /* Force Education and Skills to stack */
-    #education > div {
-        grid-template-columns: 1fr !important;
-        gap: 3rem !important;
-    }
-
-    /* Fix the Skills Border (Change from Left to Top) */
-    #education > div > div:last-child > div {
-        border-left: none !important;          /* Remove vertical line */
-        padding-left: 0 !important;
-        border-top: 2px solid #333 !important; /* Add horizontal separator */
-        padding-top: 2rem !important;
-        margin-top: 1rem !important;
-    }
-
-    /* --- Fix Navbar on Phone --- */
+    /* 1. Navbar Stacking & Sizing */
     .nav-container {
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.8rem;
+    }
+    .navbar {
+        padding: 0.8rem 0 !important;
+    }
+    .nav-logo {
+        font-size: 1.3rem !important;
     }
     .nav-menu {
         gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
-        font-size: 0.9rem;
+        font-size: 0.85rem !important;
+        width: 100%;
     }
 
-    /* --- Fix Hero Section Spacing --- */
+    /* 2. Hero Section */
     .hero {
-        padding-top: 100px !important;
-        height: auto !important;
-        display: flex !important;
+        grid-template-columns: 1fr;
+        padding-top: 110px !important; /* Adjusted for navbar */
+        min-height: auto;
+        display: flex;
         flex-direction: column;
     }
     
+    /* Allow Name to wrap on small screens so it doesn't overflow */
+    .hero-content h1 span {
+        white-space: normal !important;
+    }
+
+    .hero-image {
+        height: 50vh;
+        order: -1; 
+        width: 100%;
+        position: relative;
+    }
     .hero-content {
-        padding: 2rem 1.5rem !important;
+        padding: 2rem 1.5rem !important; /* Side padding ensures text doesn't touch edges */
         text-align: center;
+        width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem; 
+    }
+
+    /* 3. Contact Bar */
+    .contact-bar {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 1.5rem;
+        margin-top: 0;
+    }
+    .contact-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    /* 4. FORCE EXPERIENCE SECTION TO STACK */
+    /* !important overrides the inline HTML grid styles */
+    .experience-section > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+    }
+    
+    /* Ensure description text wraps properly */
+    .experience-section p {
+        width: 100%;
+        word-break: break-word;
+    }
+
+    /* Fix the vertical line border (Move to top) */
+    .experience-section > div > div:last-child {
+        border-left: none !important;
+        padding-left: 0 !important;
+        border-top: 2px solid #333 !important;
+        padding-top: 1.5rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+
+    /* 5. FORCE EDUCATION & SKILLS TO STACK */
+    #education > div {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2.5rem !important;
+        width: 100% !important;
+    }
+
+    /* 6. FIX SKILLS BORDER */
+    #education > div > div:last-child > div {
+        border-left: none !important;          
+        padding-left: 0 !important;
+        border-top: 2px solid #333 !important; 
+        padding-top: 2rem !important;
+        margin-top: 1rem !important;
+        
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    /* Shrink skill icons */
+    .skill-logo {
+        width: 45px !important;
+        height: 45px !important;
+    }
+
+    /* 7. Gallery Grid */
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+/* Very Small Phones */
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .nav-menu {
+        gap: 0.8rem;
+        font-size: 0.8rem !important;
     }
 }
