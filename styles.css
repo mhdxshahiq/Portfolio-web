@@ -917,11 +917,11 @@ footer p {
         display: flex !important;
         flex-direction: column !important;
         gap: 1.5rem !important;
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .experience-year {
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .year-title {
@@ -936,7 +936,7 @@ footer p {
     }
 
     .experience-item {
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .experience-dot {
@@ -953,7 +953,7 @@ footer p {
 
     .job-description {
         font-size: 0.95rem !important;
-        text-align: center !important;
+        text-align: left !important;
     }
 
     /* === EDUCATION & SKILLS SECTION === */
@@ -976,9 +976,9 @@ footer p {
     .education-item {
         display: flex !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: flex-start !important;
         gap: 1rem !important;
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .education-dot {
@@ -987,12 +987,12 @@ footer p {
 
     .education-title {
         font-size: 1.1rem !important;
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .education-description {
         font-size: 0.95rem !important;
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .skills-column {
@@ -1009,7 +1009,7 @@ footer p {
     }
 
     .skill-item {
-        text-align: center !important;
+        text-align: left !important;
     }
 
     .skill-logo {
