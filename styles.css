@@ -125,7 +125,7 @@ body {
 }
 
 .hero-content h1 {
-    font-size: 3.0rem;
+    font-size: 2.0rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.2;
@@ -788,6 +788,7 @@ html, body {
         margin-bottom: 2rem !important;
     }
 }
+
 
 
 
