@@ -90,7 +90,8 @@ body {
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
     align-items: center;
-    padding-top: 70px; /* Increased from 30px to prevent Nav overlap */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .hero-content {
@@ -257,6 +258,7 @@ body {
 section {
     padding: 5rem 4rem;
     transition: background-color 0.3s;
+    text-align: left;
 }
 
 .section-title {
@@ -266,6 +268,10 @@ section {
     text-align: center;
     color: #ffffff;
     transition: color 0.3s;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #AA0202;
+    display: block;
+    width: 100%;
 }
 
 .experience-section {
@@ -273,30 +279,63 @@ section {
     margin: 0 auto;
 }
 
-.experience-card {
-    background: #1a1a1a;
-    padding: 2.5rem;
-    border: 2px solid #333;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    transition: background-color 0.3s, border-color 0.3s;
+.experience-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    align-items: start;
 }
 
-.experience-header {
-    margin-bottom: 2rem;
+.experience-year {
+    text-align: left;
 }
 
-.experience-header h3 {
-    font-size: 1.8rem;
+.year-title {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #ffffff;
     margin-bottom: 0.5rem;
-    transition: color 0.3s;
 }
 
-.experience-meta {
+.year-date {
     color: #b8b8b8;
-    font-size: 1rem;
-    transition: color 0.3s;
+}
+
+.experience-content {
+    border-left: 3px solid #333;
+    padding-left: 2rem;
+}
+
+.experience-item {
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+.experience-dot {
+    position: absolute;
+    left: -2.6rem;
+    top: 0.5rem;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #AA0202;
+    border-radius: 50%;
+    background: #0a0a0a;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.company {
+    color: #b8b8b8;
+    margin-bottom: 1rem;
+}
+
+.job-description {
+    color: #b8b8b8;
+    line-height: 1.6;
 }
 
 .project-section {
@@ -441,46 +480,113 @@ section {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.education-grid {
-    max-width: 1000px;
+/* Education & Skills Section */
+.education-bg {
+    background: #0a0a0a;
+}
+
+.education-container {
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
 }
 
-.education-card {
-    background: #1a1a1a;
-    padding: 2rem;
-    border: 2px solid #333;
-    border-radius: 10px;
-    transition: background-color 0.3s, border-color 0.3s;
+.education-column {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.education-card h3 {
-    font-size: 1.5rem;
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.education-dot {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #AA0202;
+    border-radius: 50%;
+    background: #0a0a0a;
+    margin-top: 0.3rem;
+    flex-shrink: 0;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-title {
+    font-size: 1.3rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
     transition: color 0.3s;
 }
 
-.education-card .institution {
+.education-description {
     color: #b8b8b8;
-    margin-bottom: 1rem;
+    line-height: 1.6;
     transition: color 0.3s;
 }
 
-.education-card .details {
-    color: #b8b8b8;
-    font-size: 0.95rem;
-    transition: color 0.3s;
+.skills-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-footer {
-    background: #000;
-    color: #fafafa;
+.skills-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    border-left: 2px solid #333;
+    padding-left: 2rem;
+}
+
+.skill-item {
     text-align: center;
-    padding: 2rem;
-    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-item-title {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+/* Section Background Classes */
+.experience-bg {
+    background: #0a0a0a;
+}
+
+.projects-bg {
+    background: #0a0a0a;
+}
+
+.skills-bg {
+    background: #0a0a0a;
+}
+
+.contact-bg {
+    background: #0a0a0a;
+}
+
+.contact-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-description {
+    font-size: 1.1rem;
+    color: #b8b8b8;
+    margin-bottom: 2rem;
 }
 
 @media (max-width: 968px) {
@@ -642,6 +748,19 @@ footer {
     color: #b8b8b8;
 }
 
+footer {
+    background: #000;
+    color: #fafafa;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    transition: background-color 0.3s;
+}
+
+footer p {
+    margin: 0;
+}
+
 .nav-link.active {
     color: #AA0202;
 }
@@ -663,30 +782,24 @@ footer {
 
 
 /* =========================================
-   FINAL MOBILE CLEANUP (Paste at bottom of CSS)
+   MOBILE FIXES (Max-Width: 768px)
    ========================================= */
 
-/* 1. Floating Resume Button (Hidden on Desktop) */
-.mobile-resume-btn {
-    display: none;
-}
-
-/* 2. MOBILE RULES (Max Width 768px) */
 @media (max-width: 768px) {
 
-    /* --- A. REMOVE TOP NAVBAR --- */
+    /* === HIDE NAVBAR === */
     .navbar {
-        display: none !important; /* Completely hides the top menu */
+        display: none !important;
     }
 
-    /* --- B. SHOW FLOATING RESUME BUTTON --- */
+    /* === SHOW FLOATING RESUME BUTTON === */
     .mobile-resume-btn {
         display: flex !important;
         justify-content: center;
         align-items: center;
         position: fixed;
         bottom: 20px;
-        right: 20px; /* Floats in bottom-right corner */
+        right: 20px;
         background: #AA0202;
         color: white;
         padding: 12px 20px;
@@ -694,7 +807,7 @@ footer {
         text-decoration: none;
         font-weight: bold;
         font-size: 0.9rem;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
         z-index: 9999;
         animation: float 3s ease-in-out infinite;
     }
@@ -705,77 +818,287 @@ footer {
         100% { transform: translateY(0px); }
     }
 
-    /* --- C. FIX "LEFT SPACE" & ALIGNMENT --- */
+    /* === FIX LAYOUT OVERFLOW & CENTERING === */
     html, body {
         overflow-x: hidden;
         width: 100%;
     }
 
-    /* Reset all major containers to be centered with small padding */
-    .hero, section, .hero-content, .contact-bar {
+    /* === HERO SECTION === */
+    .hero {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding-top: 2rem !important;
         padding-left: 1.5rem !important;
         padding-right: 1.5rem !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        text-align: center !important; /* Centers text */
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; /* Centers items horizontally */
-    }
-
-    /* --- D. FORCE 1 COLUMN LAYOUT (1 Row / 1 Column) --- */
-    
-    /* 1. Hero Content */
-    .hero {
-        padding-top: 4rem !important; /* Less space since navbar is gone */
         gap: 2rem !important;
-    }
-
-    /* 2. Experience Section (Overrides inline HTML styles) */
-    .experience-section > div {
-        display: flex !important; /* Switch from Grid to Flex to stack */
-        flex-direction: column !important;
-        gap: 1rem !important;
         text-align: center !important;
     }
-    
-    /* Hide the decorative dots/lines if they look messy centered */
-    .experience-section > div > div:last-child {
-        border-left: none !important;
-        padding-left: 0 !important;
-        border-top: 1px solid #333; /* Separator line instead */
-        padding-top: 1rem;
-    }
 
-    /* 3. Education & Skills */
-    .education-grid, .skills-grid {
+    .hero-image {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 2rem !important;
-    }
-    
-    #education > div {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 2rem !important;
+        order: -1;
+        height: 50vh;
+        width: 100%;
     }
 
-    /* 4. Projects & Photos */
-    .projects-grid, .gallery-container {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* Strict 1 Column */
-        gap: 2rem !important;
+    .hero-content {
+        padding: 1.5rem !important;
+        text-align: center !important;
     }
 
-    /* --- E. CARD SIZING --- */
-    .project-card, .skill-card, .photo-card, .education-card {
-        width: 100% !important;
-        margin: 0 !important;
-    }
-    
-    /* Fix Hero Text Size */
     .hero-content h1 {
         font-size: 2.5rem !important;
     }
+
+    .hero-content h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+
+    .profile-pic {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* === CONTACT BAR === */
+    .contact-bar {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        padding: 1.5rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+
+    .contact-info {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        width: 100% !important;
+        align-items: center !important;
+    }
+
+    .contact-item {
+        justify-content: center !important;
+    }
+
+    .social-links {
+        justify-content: center !important;
+    }
+
+    /* === SECTION GLOBAL === */
+    section {
+        padding: 2rem 1.5rem !important;
+        text-align: left !important;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+        text-align: center !important;
+        display: block !important;
+        width: 100% !important;
+        padding-bottom: 0.8rem !important;
+        border-bottom: 2px solid #AA0202 !important;
+    }
+
+    /* === EXPERIENCE SECTION === */
+    .experience-bg {
+        background: #0a0a0a;
+    }
+
+    .experience-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+
+    .experience-year {
+        text-align: center !important;
+    }
+
+    .year-title {
+        font-size: 2rem !important;
+    }
+
+    .experience-content {
+        border-left: none !important;
+        border-top: 1px solid #333;
+        padding-left: 0 !important;
+        padding-top: 1.5rem !important;
+    }
+
+    .experience-item {
+        text-align: center !important;
+    }
+
+    .experience-dot {
+        display: none;
+    }
+
+    .job-title {
+        font-size: 1.3rem !important;
+    }
+
+    .company {
+        font-size: 0.95rem !important;
+    }
+
+    .job-description {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
+
+    /* === EDUCATION & SKILLS SECTION === */
+    .education-bg {
+        background: #0a0a0a;
+    }
+
+    .education-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3rem !important;
+    }
+
+    .education-column {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    .education-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+        text-align: center !important;
+    }
+
+    .education-dot {
+        display: none;
+    }
+
+    .education-title {
+        font-size: 1.1rem !important;
+        text-align: center !important;
+    }
+
+    .education-description {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
+
+    .skills-column {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .skills-grid-2col {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+        border-left: none !important;
+        padding-left: 0 !important;
+    }
+
+    .skill-item {
+        text-align: center !important;
+    }
+
+    .skill-logo {
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .skill-item-title {
+        font-size: 0.95rem !important;
+    }
+
+    /* === PROJECTS GRID === */
+    .projects-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: 100% !important;
+    }
+
+    .project-card {
+        width: 100% !important;
+    }
+
+    .project-image {
+        height: 200px !important;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem !important;
+    }
+
+    .project-content p {
+        font-size: 0.95rem !important;
+    }
+
+    /* === SKILLS GRID === */
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        max-width: 100% !important;
+    }
+
+    .skill-card {
+        width: 100% !important;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .skill-card p {
+        font-size: 0.95rem !important;
+    }
+
+    /* === PHOTOS PAGE (Gallery) === */
+    .photos-hero {
+        padding: 3rem 1.5rem 2rem !important;
+    }
+
+    .photos-hero h1 {
+        font-size: 2rem !important;
+    }
+
+    .photos-hero p {
+        font-size: 1rem !important;
+    }
+
+    .gallery-container {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        max-width: 100% !important;
+    }
+
+    .photo-card {
+        height: 250px !important;
+    }
+
+    /* === CTA BUTTONS === */
+    .cta-button {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+
+    /* === FOOTER === */
+    footer {
+        padding: 1.5rem !important;
+        font-size: 0.9rem !important;
+    }
+
 }
