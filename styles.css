@@ -890,3 +890,51 @@ html, body {
         padding-top: 160px !important; /* Extra space for the taller menu */
     }
 }
+
+
+
+/* =========================================
+   FINAL MOBILE FIXES: COMPACT & HIDE
+   ========================================= */
+
+/* 1. Navbar Animation Setup */
+.nav-container {
+    transition: top 0.3s ease-in-out; /* Makes the hiding smooth */
+    position: fixed; /* Must be fixed for this to work */
+    width: 100%;
+    z-index: 1000;
+}
+
+/* 2. Mobile Specific Rules */
+@media (max-width: 768px) {
+    
+    /* --- Make Navbar Compact --- */
+    .nav-container {
+        padding: 0.5rem 0 !important; /* Reduces vertical size significantly */
+    }
+
+    .nav-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important; /* Tighter gap between links */
+        padding-bottom: 5px;
+    }
+
+    /* Shrink the text/button slightly to fit better */
+    .nav-menu a {
+        font-size: 0.9rem !important; 
+        padding: 5px 10px !important; /* Smaller button padding */
+    }
+
+    /* --- Fix Name Layout --- */
+    .hero {
+        padding-top: 140px !important; /* Adjust space so content doesn't hide behind nav */
+    }
+
+    .hero-content h1 span {
+        white-space: normal !important;
+        display: block !important;
+        line-height: 1.2 !important;
+    }
+}
+
