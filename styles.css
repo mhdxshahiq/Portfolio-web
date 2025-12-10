@@ -661,97 +661,118 @@ footer {
     }
 }
 
+
 /* =========================================
-   FINAL MOBILE FIXES: HAMBURGER & CENTER ALIGN
+   FINAL MOBILE MENU & FLOATING BUTTON
    ========================================= */
 
-/* 1. HAMBURGER MENU STYLES */
-.menu-icon {
+/* 1. Floating Resume Button (Mobile Only) */
+.mobile-resume-btn {
     display: none; /* Hidden on Desktop */
+}
+
+/* Hide Desktop Resume Button on Mobile */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+
+    /* Floating Button Styles */
+    .mobile-resume-btn {
+        display: flex;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #AA0202;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+        z-index: 9999; /* Always on top */
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+        100% { transform: translateY(0px); }
+    }
+}
+
+/* 2. Menu Icon Styles */
+.menu-icon {
+    display: none;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
     cursor: pointer;
+    z-index: 10001; /* Higher than the menu box so you can click it to close */
 }
 
 .menu-icon span {
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: #e8e8e8;
     transition: 0.3s;
+    border-radius: 2px;
 }
 
-/* Rotate lines when open */
-.menu-icon.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+/* Rotate lines to make an 'X' when open */
+.menu-icon.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 8px); }
 .menu-icon.open span:nth-child(2) { opacity: 0; }
-.menu-icon.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+.menu-icon.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -8px); }
 
-/* 2. MOBILE SPECIFIC RULES */
+/* 3. Mobile Layout & Menu Box */
 @media (max-width: 768px) {
     
-    /* --- A. NAVBAR AS A MENU BOX --- */
     .menu-icon {
-        display: flex; /* Show button on mobile */
+        display: flex; /* Show hamburger icon */
     }
 
     .nav-menu {
-        position: absolute;
-        top: 60px; /* Push below navbar */
-        right: -100%; /* Hide off-screen by default */
-        width: 100%;
-        height: auto;
+        position: fixed; /* Fixed so it covers screen */
+        top: 0;
+        right: -100%; /* Hidden to the right */
+        width: 70%;   /* Cover 70% of screen width */
+        height: 100vh;
         background: #1a1a1a;
         flex-direction: column;
-        align-items: center;
-        padding: 2rem 0;
+        align-items: flex-end; /* ALIGN ITEMS TO RIGHT */
+        justify-content: center;
+        padding-right: 2rem; /* Spacing from right edge */
+        gap: 2rem;
         transition: 0.3s ease-in-out;
-        border-bottom: 2px solid #AA0202;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+        z-index: 10000;
     }
 
     .nav-menu.active {
-        right: 0; /* Slide in when active */
+        right: 0; /* Slide in */
     }
 
-    /* --- B. FIX "LEFT ALIGN" ISSUE (CENTER EVERYTHING) --- */
-    .hero, .hero-content, .contact-bar, section {
-        text-align: center !important; /* Force center text */
-        align-items: center !important;
+    .nav-link {
+        font-size: 1.2rem !important; /* Bigger text for mobile menu */
+    }
+
+    /* --- Center Alignment for Page Content --- */
+    .hero, .contact-bar, section {
+        text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
-    }
-
-    /* Fix Contact Icons Alignment */
-    .contact-info {
-        justify-content: center;
-        width: 100%;
-    }
-    .contact-item {
-        justify-content: center;
+        align-items: center !important;
     }
     
-    /* Fix Cards Alignment */
-    .projects-grid, .skills-grid, .experience-section > div {
-        justify-items: center; /* Centers grid items */
-        text-align: center;
-    }
-    
-    /* Ensure content doesn't touch edges */
-    .hero-content p, .project-content p {
-        margin: 0 auto 1.5rem auto; /* Centers paragraph blocks */
-    }
-
-    /* --- C. GLOBAL MOBILE CLEANUP --- */
-    html, body {
-        overflow-x: hidden;
-    }
-    
-    .hero {
-        padding-top: 100px !important;
-    }
-    
-    /* Force 1 column layout */
+    /* Force grids to 1 column */
     .hero, .projects-grid, .skills-grid, .gallery-container, .experience-section > div {
         grid-template-columns: 1fr !important;
+        width: 100% !important;
+    }
+    
+    /* Fix Hero Padding */
+    .hero {
+        padding-top: 100px !important;
     }
 }
 
