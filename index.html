@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shahiq@ml-engine: ~</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="terminal-flow">
+        <header class="sys-info">
+            [SESSION: ML_ENGINEER_STABLE] [KERNEL: 2021-2025] [STATUS: TRAINING_COMPLETE]
+        </header>
+
+        <section class="cmd-group">
+            <div class="prompt">whoami --verbose</div>
+            <div class="response profile-header">
+                <img src="images/home/banner/banner-img.png" alt="Profile" class="terminal-photo">
+                <div class="profile-text">
+                    <h1 class="brand-name">Muhammed Shahiq A R</h1>
+                    <p class="sub-text">ML Developer | B.Tech in AI & Data Science</p>
+                    <p>
+                        Specializing in building and deploying scalable **Machine Learning** systems. 
+                        Expertise in **MLOps** workflows using **AWS SageMaker**, focusing on 
+                        optimizing model performance and maintaining sub-100ms inference 
+                        latency for production-grade intelligent applications.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cmd-group">
+            <div class="prompt">cat /var/log/internship/zoftcares_solutions.log --verbose</div>
+            <div class="response">
+                <div class="entry">
+                    <span class="highlight-alt">AI Developer Intern @ Zoftcares Solutions (Feb - Aug 2025)</span>
+                    <p class="sub-text">Intelligent Systems & Scalable Model Deployment</p>
+                    <ul class="ml-details">
+                        <li>
+                            <strong>Agentic AI & RAG:</strong> Engineered sophisticated chatbot systems utilizing **Agentic AI** frameworks and **RAG** architectures to enable autonomous reasoning and precise document retrieval.
+                        </li>
+                        <li>
+                            <strong>Cloud Infrastructure:</strong> Leveraged **AWS Bedrock** and **SageMaker** for end-to-end model management, including fine-tuning and scaling deployments for production-ready AI products.
+                        </li>
+                        <li>
+                            <strong>Computer Vision:</strong> Developed real-time vision pipelines with **YOLO** and **OpenCV**, optimizing object detection performance for high-concurrency video streams.
+                        </li>
+                        <li>
+                            <strong>LLM Orchestration:</strong> Implemented complex prompt chains and guardrails within **LLM** workflows to ensure system reliability and minimize hallucinations.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cmd-group">
+            <div class="prompt">tail -f training_metrics.log</div>
+            <div class="response training-container">
+                <p class="dim">[EPOCH 01/10] loss: 0.6421 - accuracy: 0.7102</p>
+                <p class="dim">[EPOCH 05/10] loss: 0.2104 - accuracy: 0.8954</p>
+                <p class="dim">[EPOCH 10/10] loss: 0.0842 - accuracy: 0.9412</p>
+                <p class="highlight-alt">>> STATUS: Optimization Complete. Model ready for deployment.</p>
+            </div>
+        </section>
+
+        <section class="cmd-group">
+            <div class="prompt">ls -R /projects/machine-learning</div>
+            <div class="response project-grid">
+                
+                <div class="project-item">
+                    <span class="highlight">#01 RAG-based Mental Support Chatbot</span>
+                    <p>Engineered a retrieval-augmented system with **ChromaDB**. Optimized prompt templates for high-fidelity responses.</p>
+                    <p class="stack">STK: LangChain, Gemini, Python, ChromaDB</p>
+                    <a href="https://github.com/mhdxshahiq/mental-support-chatbot" target="_blank" class="repo-link">view_source →</a>
+                </div>
+
+                <div class="project-item">
+                    <span class="highlight">#02 Human Violence Detection</span>
+                    <p>End-to-end CV project. Fine-tuned YOLO for real-time video stream analysis with 90% accuracy.</p>
+                    <p class="stack">STK: Deep Learning, YOLO, OpenCV, PyTorch</p>
+                    <a href="https://github.com/mhdxshahiq/violence-detection-new-" target="_blank" class="repo-link">view_source →</a>
+                </div>
+
+                <div class="project-item">
+                    <span class="highlight">#03 Voicemail AI Prioritization</span>
+                    <p>Designed a multi-stage **NLP pipeline** for transcription and urgency scoring via Twilio APIs.</p>
+                    <p class="stack">STK: NLP, Audio Processing, Streamlit, Twilio</p>
+                    <a href="https://github.com/mhdxshahiq/Final-year-project" target="_blank" class="repo-link">view_source →</a>
+                </div>
+
+            </div>
+        </section>
+
+<section class="cmd-group">
+    <div class="prompt">./list_capabilities.sh --verbose</div>
+    <div class="response skill-matrix">
+        <div class="skill-category">
+            <span class="highlight">[Core Modeling]</span>
+            <p>Python, PyTorch, TensorFlow, Scikit-learn, HuggingFace</p>
+        </div>
+        <div class="skill-category">
+            <span class="highlight">[Gen-AI & LLMs]</span>
+            <p>LangChain, AWS Bedrock, Pinecone, ChromaDB, Prompt Engineering</p>
+        </div>
+        <div class="skill-category">
+            <span class="highlight">[MLOps & Vision]</span>
+            <p>AWS SageMaker, YOLOv11, OpenCV, FastAPI, Docker, Git</p>
+        </div>
+        <div class="skill-category">
+            <span class="highlight">[Data Engineering]</span>
+            <p>SQL, Pandas, NumPy, ETL Pipelines, Advanced Analytics</p>
+        </div>
+    </div>
+</section>
+
+
+        <section class="cmd-group">
+    <div class="prompt">./start_shahiq_bot.sh --interactive</div>
+    <div class="response chatbot-container">
+        <div id="chat-box" class="chat-history">
+            <p class="bot-msg">about_bot >> Systems ready.</p>
+            <p class="dim">Try: experience, vision, stack, project</p>
+        </div>
+        <div class="chat-input-area">
+            <span class="prompt-arrow">➜</span>
+            <input type="text" id="user-input" placeholder="Query the model..." autofocus autocomplete="off">
+        </div>
+    </div>
+</section>
+
+        <section class="cmd-group">
+            <div class="prompt active">ping -c 3 connections <span class="cursor"></span></div>
+            <div class="response contact-links">
+                <p>➜ <a href="mailto:muhammedxshahiq@gmail.com" class="nav-link">email --send muhammedxshahiq@gmail.com</a></p>
+                <p>➜ <a href="https://www.linkedin.com/in/mhdxshahiq/" target="_blank" class="nav-link">open https://linkedin.com/in/mhdxshahiq</a></p>
+                <p>➜ <a href="https://github.com/mhdxshahiq" target="_blank" class="nav-link">open https://github.com/mhdxshahiq</a></p>
+                <p>➜ <a href="public/shahiq_resume.pdf" target="_blank" class="nav-link">cat shahiq_resume.pdf</a></p>
+            </div>
+        </section>
+    </main>
+
+   <script>
+        const chatBox = document.getElementById('chat-box');
+        const userInput = document.getElementById('user-input');
+
+        const responses = {
+    "experience": "shahiq_bot >> [PROFILING_INTERNSHIP]<br>ML Engineer specializing in Agentic AI and RAG frameworks. Hands-on experience at Zoftcares Solutions deploying scalable models via AWS Bedrock & SageMaker. Expertise in Computer Vision optimization (YOLO/OpenCV) for enterprise-grade applications.",
+    
+    "vision": "shahiq_bot >> [CV_PIPELINE_STATUS]<br>Architected and optimized real-time Computer Vision pipelines. Successfully fine-tuned YOLO architectures for human action recognition, achieving 90% inference accuracy with low-latency performance in high-concurrency environments and deployed using OpenCV and PyTorch frameworks.",
+    
+    "rag": "shahiq_bot >> [RAG_SYSTEM_DIAGNOSTIC]<br>Engineering modular RAG pipelines utilizing LangChain for orchestration and Pinecone/ChromaDB for high-dimensional vector indexing. Focused on mitigating hallucinations through advanced retrieval-grading and self-correction loops.",
+    
+    "help": "shahiq_bot >> Available ML Modules: experience, vision, rag, stack, projects. Type a command to query.",
+    
+    "stack": "shahiq_bot >> [SYSTEM_ENVIRONMENT_CHECK]<br>-------------------------------------------<br>" +
+             "<b>[CORE MODELING]</b>: Python, PyTorch, TensorFlow, Scikit-learn<br>" +
+             "<b>[GEN-AI / LLM]</b>: LangChain, AWS Bedrock, Pinecone, ChromaDB<br>" +
+             "<b>[MLOPS & CLOUD]</b>: AWS SageMaker, Docker, FastAPI, Git<br>" +
+             "<b>[DATA ENGINE]</b>: SQL, Pandas, NumPy, Scrapy (ETL Pipelines)<br>" +
+             "-------------------------------------------<br>" +
+             "<b>STATUS</b>: ok",
+    
+    "projects": "shahiq_bot >> [REPOSITORY_QUERY]<br>• <b>Multi-agentic RAG</b>: Autonomous GenAI systems for intelligent document reasoning.<br>• <b>Violence Detection</b>: Real-time CV fine-tuned for high-accuracy security monitoring.<br>• <b>NLP Voicemail Prioritization</b>: Automated transcription & urgency scoring via Twilio."
+};
+
+        userInput.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                const input = userInput.value.toLowerCase().trim();
+                if (!input) return;
+
+                const userMsg = document.createElement('p');
+                userMsg.innerHTML = `<span class="user-label">guest@terminal:~$</span> ${input}`;
+                chatBox.appendChild(userMsg);
+
+                const botMsg = document.createElement('p');
+                botMsg.className = 'bot-msg';
+                const reply = responses[input] || "Command not found. Type 'help' for ML modules.";
+                botMsg.innerHTML = `shahiq_bot >> ${reply}`;
+                
+                chatBox.appendChild(botMsg);
+                userInput.value = '';
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
