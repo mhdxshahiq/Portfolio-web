@@ -97,81 +97,109 @@ h1 { font-size: 2.2rem; letter-spacing: -1px; margin-bottom: 5px; }
 
 
 /* =========================================
-   MOBILE RESPONSIVENESS (Media Queries)
+   REFINED MOBILE FIXES 
    ========================================= */
 
 @media (max-width: 768px) {
-    /* 1. Adjust global padding for smaller screens */
+    /* 1. Expand container width for better readability */
     body {
-        padding: 40px 20px;
+        padding: 30px 15px; /* Reduced side padding to give text more room */
         font-size: 1rem;
+        line-height: 1.6;
     }
 
-    /* 2. Stack the header elements vertically */
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /* 2. Fix the Header & Photo Layout */
+    .header {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+
     .header-main {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        gap: 15px;
     }
 
-    /* 3. Scale down the large typography for mobile */
+    .profile-photo {
+        width: 100px; /* Slightly larger for better visibility */
+        height: 100px;
+    }
+
+    /* 3. Scale Typography */
     h1 {
-        font-size: 1.8rem;
-        letter-spacing: -0.5px;
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    .hero-sub {
+        font-size: 1rem;
+        margin-top: 5px;
     }
 
     .large-text {
         font-size: 1.1rem;
-        line-height: 1.6;
+        color: #d1d1d6; /* Slightly brighter for mobile contrast */
     }
 
-    /* 4. Adjust navigation links for touch targets */
+    /* 4. Navigation Links */
     .nav-links {
-        gap: 20px;
-        flex-direction: row;
-        width: 100%;
+        gap: 15px;
+        font-size: 0.9rem;
     }
 
-    /* 5. Force experience entries to stack properly */
+    /* 5. Experience Log Refinement */
     .entry-header {
         flex-direction: column;
-        gap: 5px;
+        margin-bottom: 10px;
     }
 
     .entry-title {
-        font-size: 1.2rem;
-    }
-
-    /* 6. Simplify project rows for better vertical flow */
-    .project-row {
-        padding: 20px;
-        margin-bottom: 15px;
-    }
-
-    .project-row span.t-yellow {
         font-size: 1.15rem;
     }
 
-    /* 7. Change Tech Stack grid to a single column */
+    .details-list li {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+        padding-left: 5px;
+    }
+
+    /* 6. Fix Project Row Padding */
+    .project-row {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .project-row span.t-yellow {
+        font-size: 1.1rem;
+    }
+
+    /* 7. Stack Grid to List */
     .stack-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .stack-item {
+        font-size: 0.9rem;
         padding: 15px;
-        font-size: 0.85rem;
     }
 
-    /* 8. Align the status bar and resume button */
+    /* 8. Status Bar Footer */
     .status-bar {
         flex-direction: column;
         align-items: flex-start;
-        gap: 25px;
+        gap: 20px;
     }
 
     .resume-footer-link {
         width: 100%;
         text-align: center;
-        padding: 12px 0;
+        padding: 14px;
     }
 }
