@@ -1,187 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="description" content="Portfolio of Muhammed Shahiq A R - AI/ML Engineer specializing in RAG systems, Computer Vision, and Python.">
+    <link rel="icon" type="image/x-icon" href="simple/images/icon/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>shahiq@ml-engine: ~</title>
+    <title>Muhammed Shahiq A R - AI/ML Engineer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="terminal-flow">
-        <header class="sys-info">
-            [SESSION: ML_ENGINEER_STABLE] [KERNEL: 2021-2025] [STATUS: TRAINING_COMPLETE]
-        </header>
 
-        <section class="cmd-group">
-            <div class="prompt">whoami --verbose</div>
-            <div class="response profile-header">
-                <img src="images/home/banner/banner-img.png" alt="Profile" class="terminal-photo">
-                <div class="profile-text">
-                    <h1 class="brand-name">Muhammed Shahiq A R</h1>
-                    <p class="sub-text">ML Developer | B.Tech in AI & Data Science</p>
-                    <p>
-                        Specializing in building and deploying scalable **Machine Learning** systems. 
-                        Expertise in **MLOps** workflows using **AWS SageMaker**, focusing on 
-                        optimizing model performance and maintaining sub-100ms inference 
-                        latency for production-grade intelligent applications.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <a href="public/shahiq_resume.pdf" target="_blank" class="floating-resume-btn">
+    Download Resume
+</a>
 
-        <section class="cmd-group">
-            <div class="prompt">cat /var/log/internship/zoftcares_solutions.log --verbose</div>
-            <div class="response">
-                <div class="entry">
-                    <span class="highlight-alt">AI Developer Intern @ Zoftcares Solutions (Feb - Aug 2025)</span>
-                    <p class="sub-text">Intelligent Systems & Scalable Model Deployment</p>
-                    <ul class="ml-details">
-                        <li>
-                            <strong>Agentic AI & RAG:</strong> Engineered sophisticated chatbot systems utilizing **Agentic AI** frameworks and **RAG** architectures to enable autonomous reasoning and precise document retrieval.
-                        </li>
-                        <li>
-                            <strong>Cloud Infrastructure:</strong> Leveraged **AWS Bedrock** and **SageMaker** for end-to-end model management, including fine-tuning and scaling deployments for production-ready AI products.
-                        </li>
-                        <li>
-                            <strong>Computer Vision:</strong> Developed real-time vision pipelines with **YOLO** and **OpenCV**, optimizing object detection performance for high-concurrency video streams.
-                        </li>
-                        <li>
-                            <strong>LLM Orchestration:</strong> Implemented complex prompt chains and guardrails within **LLM** workflows to ensure system reliability and minimize hallucinations.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="cmd-group">
-            <div class="prompt">tail -f training_metrics.log</div>
-            <div class="response training-container">
-                <p class="dim">[EPOCH 01/10] loss: 0.6421 - accuracy: 0.7102</p>
-                <p class="dim">[EPOCH 05/10] loss: 0.2104 - accuracy: 0.8954</p>
-                <p class="dim">[EPOCH 10/10] loss: 0.0842 - accuracy: 0.9412</p>
-                <p class="highlight-alt">>> STATUS: Optimization Complete. Model ready for deployment.</p>
-            </div>
-        </section>
-
-        <section class="cmd-group">
-            <div class="prompt">ls -R /projects/machine-learning</div>
-            <div class="response project-grid">
-                
-                <div class="project-item">
-                    <span class="highlight">#01 RAG-based Mental Support Chatbot</span>
-                    <p>Engineered a retrieval-augmented system with **ChromaDB**. Optimized prompt templates for high-fidelity responses.</p>
-                    <p class="stack">STK: LangChain, Gemini, Python, ChromaDB</p>
-                    <a href="https://github.com/mhdxshahiq/mental-support-chatbot" target="_blank" class="repo-link">view_source →</a>
-                </div>
-
-                <div class="project-item">
-                    <span class="highlight">#02 Human Violence Detection</span>
-                    <p>End-to-end CV project. Fine-tuned YOLO for real-time video stream analysis with 90% accuracy.</p>
-                    <p class="stack">STK: Deep Learning, YOLO, OpenCV, PyTorch</p>
-                    <a href="https://github.com/mhdxshahiq/violence-detection-new-" target="_blank" class="repo-link">view_source →</a>
-                </div>
-
-                <div class="project-item">
-                    <span class="highlight">#03 Voicemail AI Prioritization</span>
-                    <p>Designed a multi-stage **NLP pipeline** for transcription and urgency scoring via Twilio APIs.</p>
-                    <p class="stack">STK: NLP, Audio Processing, Streamlit, Twilio</p>
-                    <a href="https://github.com/mhdxshahiq/Final-year-project" target="_blank" class="repo-link">view_source →</a>
-                </div>
-
-            </div>
-        </section>
-
-<section class="cmd-group">
-    <div class="prompt">./list_capabilities.sh --verbose</div>
-    <div class="response skill-matrix">
-        <div class="skill-category">
-            <span class="highlight">[Core Modeling]</span>
-            <p>Python, PyTorch, TensorFlow, Scikit-learn, HuggingFace</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Mhdxshahiq</a>
+            <ul class="nav-menu"> 
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="photos.html" class="nav-link">Photos</a></li>
+                <li><a href="public/shahiq_resume.pdf" target="_blank" class="nav-link nav-cta">Download Resume</a></li>
+            </ul>
         </div>
-        <div class="skill-category">
-            <span class="highlight">[Gen-AI & LLMs]</span>
-            <p>LangChain, AWS Bedrock, Pinecone, ChromaDB, Prompt Engineering</p>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <img src="images/home/banner/banner-img.png" alt="Profile" class="profile-pic">
+            
+            <h1>I'm <span style="color: #AA0202;">Muhammed Shahiq A R.</span></h1>
+            <h2>AI/ML Engineer</h2>
+            
+            <p>AI Engineer skilled in machine learning, deep learning, NLP, generative AI, and data-science workflows. Experienced in building ML models, chatbots, computer-vision systems, and AI-powered products. Proficient in Python, with a strong track record of delivering real-world AI solutions.</p>
+            
         </div>
-        <div class="skill-category">
-            <span class="highlight">[MLOps & Vision]</span>
-            <p>AWS SageMaker, YOLOv11, OpenCV, FastAPI, Docker, Git</p>
-        </div>
-        <div class="skill-category">
-            <span class="highlight">[Data Engineering]</span>
-            <p>SQL, Pandas, NumPy, ETL Pipelines, Advanced Analytics</p>
+        
+        <div class="hero-image">
+            <img src="images/home/banner/banner-img.png" alt="AI/ML Engineer" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
     </div>
-</section>
 
-
-        <section class="cmd-group">
-    <div class="prompt">./start_shahiq_bot.sh --interactive</div>
-    <div class="response chatbot-container">
-        <div id="chat-box" class="chat-history">
-            <p class="bot-msg">about_bot >> Systems ready.</p>
-            <p class="dim">Try: experience, vision, stack, project</p>
+    <div class="contact-bar">
+        <div class="contact-info">
+            <a href="mailto:muhammedxshahiq@gmail.com" class="contact-item">
+                <img src="images/icon/mail.png" alt="email" class="icon">muhammedxshahiq@gmail.com
+            </a>
+            <a href="tel:+918606329295" class="contact-item">
+                <img src="images/icon/call-icon.svg" alt="phone" class="icon">+91 8606329295
+            </a>
+            <span class="contact-item">
+                <img src="images/icon/location.png" alt="location" class="icon">Bangalore, Karnataka
+            </span>
         </div>
-        <div class="chat-input-area">
-            <span class="prompt-arrow">➜</span>
-            <input type="text" id="user-input" placeholder="Query the model..." autofocus autocomplete="off">
+        
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/mhdxshahiq/" target="_blank" title="LinkedIn">
+                <img src="images/icon/linkedin.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/mhdxshahiq" target="_blank" title="GitHub">
+                <img src="images/icon/github.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://www.instagram.com/mhdxshahiq/" target="_blank" title="Instagram">
+                <img src="images/icon/instagram.png" alt="Instagram" class="icon">
+            </a>
         </div>
     </div>
-</section>
 
-        <section class="cmd-group">
-            <div class="prompt active">ping -c 3 connections <span class="cursor"></span></div>
-            <div class="response contact-links">
-                <p>➜ <a href="mailto:muhammedxshahiq@gmail.com" class="nav-link">email --send muhammedxshahiq@gmail.com</a></p>
-                <p>➜ <a href="https://www.linkedin.com/in/mhdxshahiq/" target="_blank" class="nav-link">open https://linkedin.com/in/mhdxshahiq</a></p>
-                <p>➜ <a href="https://github.com/mhdxshahiq" target="_blank" class="nav-link">open https://github.com/mhdxshahiq</a></p>
-                <p>➜ <a href="public/shahiq_resume.pdf" target="_blank" class="nav-link">cat shahiq_resume.pdf</a></p>
+    <section id="experience" style="background: #0a0a0a;">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-section">
+            <div style="display: grid; grid-template-columns: 200px 1fr; gap: 3rem; max-width: 1200px; margin: 0 auto; align-items: start;">
+                <div>
+                    <h3 style="font-size: 2.5rem; font-weight: 700; color: #ffffff;">2025</h3>
+                    <p style="color: #b8b8b8; margin-top: 0.5rem;">February - August</p>
+                </div>
+                <div style="border-left: 3px solid #333; padding-left: 2rem;">
+                    <div style="position: relative; padding-bottom: 2rem;">
+                        <div style="position: absolute; left: -2.6rem; top: 0.5rem; width: 20px; height: 20px; border: 3px solid #AA0202; border-radius: 50%; background: #0a0a0a;"></div>
+                        <h4 style="font-size: 1.5rem; color: #ffffff; margin-bottom: 0.5rem;">AI Developer Intern</h4>
+                        <p style="color: #b8b8b8; margin-bottom: 1rem;">www.zoftcares.com</p>
+                        <p style="color: #b8b8b8; line-height: 1.6;">Built an LLM-powered RAG chatbot with optimized retrieval, domain-specific prompt engineering, and secure response controls. Improved real-time computer-vision models for workplace hazard detection, boosting accuracy and reducing inference latency. Developed scalable APIs, evaluation tools, and monitoring systems to support production-level AI performance.</p>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-   <script>
-        const chatBox = document.getElementById('chat-box');
-        const userInput = document.getElementById('user-input');
+    <section id="projects" style="background: #0a0a0a;">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image" style="background: url(images/work/work-img-1.png) center/cover;"></div>
+                <div class="project-content">
+                    <h3>RAG-based Chatbot</h3>
+                    <p>Built a modular RAG system with Gemini Flash, MiniLM embeddings, and ChromaDB. Designed deterministic retrieval flows and safe fallback logic using RunnableLambda. Applied strict prompt templates and output parsing to minimize hallucinations.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mhdxshahiq/mental-support-chatbot" class="project-link">GitHub →</a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">LangChain</span>
+                        <span class="tag">ChromaDB</span>
+                        <span class="tag">Gemini</span>
+                        <span class="tag">RAG</span>
+                    </div>
+                </div>
+            </div>
 
-        const responses = {
-    "experience": "shahiq_bot >> [PROFILING_INTERNSHIP]<br>ML Engineer specializing in Agentic AI and RAG frameworks. Hands-on experience at Zoftcares Solutions deploying scalable models via AWS Bedrock & SageMaker. Expertise in Computer Vision optimization (YOLO/OpenCV) for enterprise-grade applications.",
-    
-    "vision": "shahiq_bot >> [CV_PIPELINE_STATUS]<br>Architected and optimized real-time Computer Vision pipelines. Successfully fine-tuned YOLO architectures for human action recognition, achieving 90% inference accuracy with low-latency performance in high-concurrency environments and deployed using OpenCV and PyTorch frameworks.",
-    
-    "rag": "shahiq_bot >> [RAG_SYSTEM_DIAGNOSTIC]<br>Engineering modular RAG pipelines utilizing LangChain for orchestration and Pinecone/ChromaDB for high-dimensional vector indexing. Focused on mitigating hallucinations through advanced retrieval-grading and self-correction loops.",
-    
-    "help": "shahiq_bot >> Available ML Modules: experience, vision, rag, stack, projects. Type a command to query.",
-    
-    "stack": "shahiq_bot >> [SYSTEM_ENVIRONMENT_CHECK]<br>-------------------------------------------<br>" +
-             "<b>[CORE MODELING]</b>: Python, PyTorch, TensorFlow, Scikit-learn<br>" +
-             "<b>[GEN-AI / LLM]</b>: LangChain, AWS Bedrock, Pinecone, ChromaDB<br>" +
-             "<b>[MLOPS & CLOUD]</b>: AWS SageMaker, Docker, FastAPI, Git<br>" +
-             "<b>[DATA ENGINE]</b>: SQL, Pandas, NumPy, Scrapy (ETL Pipelines)<br>" +
-             "-------------------------------------------<br>" +
-             "<b>STATUS</b>: ok",
-    
-    "projects": "shahiq_bot >> [REPOSITORY_QUERY]<br>• <b>Multi-agentic RAG</b>: Autonomous GenAI systems for intelligent document reasoning.<br>• <b>Violence Detection</b>: Real-time CV fine-tuned for high-accuracy security monitoring.<br>• <b>NLP Voicemail Prioritization</b>: Automated transcription & urgency scoring via Twilio."
-};
+            <div class="project-card">
+                <div class="project-image" style="background: url('images/work/work-img-2.png') center/cover;"></div>
+                <div class="project-content">
+                    <h3>Voicemail Prioritization System</h3>
+                    <p>Developed an AI pipeline for transcription, sentiment analysis, and urgency scoring. Implemented PII-safe processing and automated ingestion via Twilio APIs. Built a Streamlit dashboard for real-time voicemail insights.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mhdxshahiq/FInal-year-project" class="project-link">GitHub →</a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">NLP</span>
+                        <span class="tag">Audio Processing</span>
+                        <span class="tag">Twilio</span>
+                        <span class="tag">Streamlit</span>
+                    </div>
+                </div>
+            </div>
 
-        userInput.addEventListener('keypress', function (e) {
-            if (e.key === 'Enter') {
-                const input = userInput.value.toLowerCase().trim();
-                if (!input) return;
+            <div class="project-card">
+                <div class="project-image" style="background: url('images/work/work-img-3.png') center/cover;"></div>
+                <div class="project-content">
+                    <h3>Human Violence Detection</h3>
+                    <p>Built a real-time detection model achieving 90% accuracy using YOLO and OpenCV. Implemented scalable pipelines for evaluation, alerts, and deployment.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/mhdxshahiq/violance-detection-new-" class="project-link">GitHub →</a>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">YOLO</span>
+                        <span class="tag">OpenCV</span>
+                        <span class="tag">Computer Vision</span>
+                        <span class="tag">Deep Learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                const userMsg = document.createElement('p');
-                userMsg.innerHTML = `<span class="user-label">guest@terminal:~$</span> ${input}`;
-                chatBox.appendChild(userMsg);
+    <section id="skills" style="background: #0a0a0a;">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>💻 Programming Languages</h3>
+                <p>Python, R, SQL, C</p>
+            </div>
+            <div class="skill-card">
+                <h3>📚 Libraries & Frameworks</h3>
+                <p>NumPy, Pandas, Scikit-learn, PyTorch, TensorFlow, OpenCV, SpaCy, Hugging Face Transformers, FastAPI, LangChain</p>
+            </div>
+            <div class="skill-card">
+                <h3>🤖 Machine Learning</h3>
+                <p>Supervised Learning, Model Evaluation, Feature Engineering, Data Preprocessing</p>
+            </div>
+            <div class="skill-card">
+                <h3>🧠 Deep Learning</h3>
+                <p>Neural Networks, CNNs, RNNs, Transfer Learning, Model Optimization</p>
+            </div>
+            <div class="skill-card">
+                <h3>💬 Natural Language Processing</h3>
+                <p>Text Processing, Sentiment Analysis, LLMs, RAG Systems, Prompt Engineering</p>
+            </div>
+            <div class="skill-card">
+                <h3>👁️ Computer Vision</h3>
+                <p>Object Detection, Image Classification, YOLO, Real-time Processing</p>
+            </div>
+        </div>
+    </section>
 
-                const botMsg = document.createElement('p');
-                botMsg.className = 'bot-msg';
-                const reply = responses[input] || "Command not found. Type 'help' for ML modules.";
-                botMsg.innerHTML = `shahiq_bot >> ${reply}`;
-                
-                chatBox.appendChild(botMsg);
-                userInput.value = '';
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }
-        });
-    </script>
+    <section id="education" style="background: #0a0a0a;">
+        <h2 class="section-title">Education & Skills</h2>
+        <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+            
+            <!-- Education Column -->
+            <div>
+                <div style="margin-bottom: 3rem;">
+                    <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 20px; height: 20px; border: 3px solid #AA0202; border-radius: 50%; background: #0a0a0a; margin-top: 0.3rem; flex-shrink: 0;"></div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; color: #ffffff; margin-bottom: 0.5rem;">B.Tech in AI & Data Science (MESCE) - 2021-2025</h3>
+                            <p style="color: #b8b8b8; line-height: 1.6;">Pursued a comprehensive AI and Data Science program covering machine learning, deep learning, algorithms, and data analytics, with practical experience in model development and deployment.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 3rem;">
+                    <div style="display: flex; align-items: start; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 20px; height: 20px; border: 3px solid #AA0202; border-radius: 50%; background: #0a0a0a; margin-top: 0.3rem; flex-shrink: 0;"></div>
+                        <div>
+                            <h3 style="font-size: 1.3rem; color: #ffffff; margin-bottom: 0.5rem;">Higher Secondary - NGO Quarters HSS Kozhikode - 2019-2021</h3>
+                            <p style="color: #b8b8b8; line-height: 1.6;">Completed higher secondary education in Computer Science stream with a strong academic foundation, actively participating in school-level activities and building core analytical and communication skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Column -->
+            <div>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; border-left: 2px solid #333; padding-left: 2rem;">
+                    
+                    <div style="text-align: center;">
+                        <img src="images/home/education-skill/ai%20logo.png" alt="AI" class="skill-logo">
+                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Artificial Intelligence</h4>
+                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
+                            <!-- <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span> -->
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="images/home/education-skill/ml%20logo.png" alt="Machine Learning" class="skill-logo">
+                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Machine Learning</h4>
+                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="images/home/education-skill/data-science%20%20logo.png" alt="Data Science" class="skill-logo">
+                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Data Science</h4>
+                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="images/home/education-skill/python%20logo.png" alt="Python" class="skill-logo">
+                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Python</h4>
+                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="images/home/education-skill/data-analysis%20logo.png" alt="Data Analysis" class="skill-logo">
+                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">Data Visualization</h4>
+                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
+                            <!-- <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #AA0202; border-radius: 50%;"></span>
+                            <span style="width: 12px; height: 12px; background: #333; border-radius: 50%;"></span> -->
+                        </div>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <img src="images/home/education-skill/r.png" alt="R" class="skill-logo">
+                        <h4 style="font-size: 1.1rem; color: #ffffff; margin-bottom: 0.5rem;">R</h4>
+                        <div style="display: flex; gap: 0.3rem; justify-content: center;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" style="background: #0a0a0a;">
+        <h2 class="section-title">Let's Connect</h2>
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; color: #b8b8b8; margin-bottom: 2rem;">
+                I'm always eager to collaborate on AI/ML projects and discuss new opportunities. Feel free to reach out!
+            </p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muhammedxshahiq@gmail.com" target="_blank" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <footer>
+    <p>&copy; 2025 Muhammed Shahiq A R. All rights reserved.</p>
+</footer>
 </body>
 </html>
